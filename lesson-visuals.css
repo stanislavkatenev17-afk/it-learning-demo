@@ -1,0 +1,204 @@
+/* Учебные иллюстрации: подписи — живой текст, рисунки — собственные SVG. */
+.lesson-figure{--sketch-font:"Segoe Print","Comic Sans MS",cursive;--sketch-line:var(--ink);margin:32px 0 18px;padding:28px 24px;border:1px solid var(--figure-border);border-radius:3px;background-color:var(--figure-start);background-image:radial-gradient(ellipse at 35% 0%,var(--figure-glow),transparent 70%),radial-gradient(var(--figure-dot) .7px,transparent .9px),linear-gradient(135deg,var(--figure-start),var(--figure-end));background-size:100% 100%,18px 18px,100% 100%;box-shadow:inset 0 1px 0 var(--figure-inner-edge),0 5px 22px var(--figure-shadow);font:14px/1.7 var(--font);min-width:0;overflow-wrap:break-word}
+.lesson-figure figcaption{margin-bottom:24px}
+.lesson-figure .visual-kicker{display:block;font:10px/1.6 Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.lesson-figure .visual-title{display:block;width:fit-content;color:var(--ink);font:700 23px/1.6 var(--sketch-font);letter-spacing:-.035em;text-decoration:underline;text-decoration-color:var(--accent-border);text-decoration-thickness:5px;text-underline-offset:6px;text-decoration-skip-ink:none}
+.lesson-figure p{margin:0}
+.lesson-figure .visual-note{margin-top:22px;padding-top:16px;border-top:1px solid var(--rule);font-size:12px;line-height:1.85;color:var(--muted)}
+.lesson-figure .visual-intro{font-size:14px;color:var(--text);margin:0 0 20px}
+.lesson-figure svg{display:block;width:28px;height:28px;flex-shrink:0}
+.lesson-figure .visual-icon,.lesson-figure .part-icon,.lesson-figure .endpoint-icon{display:grid;place-items:center;width:64px;height:64px;border:0;border-radius:44% 52% 48% 45%;background:repeating-linear-gradient(-48deg,transparent 0 5px,var(--accent-border) 5px 6px),var(--soft);color:var(--accent);flex-shrink:0}
+.lesson-figure .visual-chip{display:inline-block;width:fit-content;max-width:100%;padding:4px 9px;background:var(--soft);border:1px solid var(--accent-border);border-radius:6px;color:var(--accent);font-size:10px;font-weight:600;line-height:1.6}
+.lesson-figure .mock-browser,.lesson-figure .demo-picture{position:relative;overflow:hidden;border:0;border-radius:4px 6px 3px 7px;background:var(--surface);min-width:0;box-shadow:none;padding:3px}
+.lesson-figure .mock-chrome{display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--soft);border-bottom:1px solid var(--accent-border);color:var(--muted);font-size:10px;line-height:1.5}
+.lesson-figure .mock-dots{display:flex;gap:4px}.lesson-figure .mock-dots i{width:4px;height:4px;border-radius:50%;background:var(--accent-line)}
+.lesson-figure .mock-content{padding:20px}
+.lesson-figure .mock-heading{font:700 26px/1.5 var(--sketch-font);letter-spacing:-.03em;color:var(--accent);margin:0 0 18px;padding:0;border:0}
+html[data-theme="light"] .lesson-figure .mock-heading.is-green{color:#267347}
+
+.lesson-figure .mock-button,.lesson-figure .demo-button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;max-width:100%;padding:10px 14px;border:1.5px solid var(--accent);border-radius:4px 8px 5px 7px;background:repeating-linear-gradient(-48deg,transparent 0 5px,var(--accent-border) 5px 6px),var(--soft);color:var(--accent);font:700 13px/1.6 var(--sketch-font);text-align:center}
+.lesson-figure .mock-footnote{padding:9px 14px;border-top:1px solid var(--rule-soft);color:var(--muted);font-size:10px}
+.lesson-figure .single-page{width:280px;max-width:100%;margin:auto}
+.lesson-figure .single-page>.visual-chip{display:block;margin:0 auto 10px}
+.lesson-figure .roles-branches{position:relative;display:grid;grid-template-columns:repeat(3,1fr);height:30px;margin:0 0 0}
+.lesson-figure .roles-branches::before{content:"";position:absolute;left:16.667%;right:16.667%;top:14px;border-top:1px solid var(--accent-line)}
+.lesson-figure .roles-branches::after{content:"";position:absolute;top:14px;left:50%;height:16px;border-left:1px solid var(--accent-line)}
+.lesson-figure .roles-branches>span{height:14px;width:1px;align-self:start;justify-self:center;background:var(--accent-line)}
+.lesson-figure .roles-processing{display:grid;justify-items:center;gap:3px;margin:4px 0 14px;color:var(--text);text-align:center;font-size:12px;line-height:1.7}
+.lesson-figure .roles-processing>span{font-size:25px;line-height:1.2;color:var(--accent-line)}
+.lesson-figure .role-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.lesson-figure .role-card{--role-color:var(--accent);--role-soft:var(--soft);--role-border:var(--accent-border);--sketch-line:var(--role-color);position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;min-width:0;padding:22px 13px;border:0;border-radius:3px;background:var(--role-soft);text-align:center}
+.lesson-figure .role-css{--role-color:var(--teal);--role-soft:var(--teal-soft);--role-border:var(--teal-border)}
+.lesson-figure .role-js{--role-color:var(--ochre);--role-soft:var(--ochre-soft);--role-border:var(--ochre-border)}
+.lesson-figure .role-card>.visual-icon{background:repeating-linear-gradient(-48deg,transparent 0 5px,var(--role-border) 5px 6px);color:var(--role-color)}
+.lesson-figure .role-card>strong{font:700 21px/1.5 var(--sketch-font);color:var(--role-color)}
+.lesson-figure .role-card>span:last-child{font-size:12px;line-height:1.7;color:var(--text)}
+.lesson-figure .role-purpose{font-size:14px;line-height:1.55;font-weight:600;color:var(--ink)}
+.lesson-figure .role-example{width:100%;padding-top:12px;border-top:1px solid var(--rule);font-size:13px;line-height:1.7;color:var(--text)}
+.lesson-figure .role-example>span{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}
+.lesson-figure .visual-limits{margin-top:20px;border:1px solid var(--rule);border-radius:8px;background:var(--surface)}
+.lesson-figure .visual-limits summary{min-height:44px;padding:12px 14px;font-size:12px;color:var(--accent)}
+.lesson-figure .visual-limits ul{margin:0;padding:0 18px 14px 30px;font-size:13px;color:var(--text)}
+.lesson-figure .visual-limits li{margin:0 0 9px;padding-left:3px}
+.lesson-figure .structure-root{position:relative;display:flex;align-items:center;gap:14px;padding:18px;border:0;border-radius:3px;background:var(--soft);color:var(--ink);font:700 18px/1.7 var(--sketch-font)}
+.lesson-figure .structure-root .visual-icon{background:var(--surface)}
+.lesson-figure .parts-tree{display:grid;gap:12px;list-style:none;margin:0 0 0 30px;padding:20px 0 0 24px;border-left:1px solid var(--accent-line)}
+.lesson-figure .parts-tree>li{position:relative;display:flex;align-items:center;gap:14px;padding:19px 17px;border:0;border-radius:3px;background:var(--surface);margin:0;min-width:0}
+.lesson-figure .parts-tree>li::before{content:"";position:absolute;left:-25px;top:50%;width:24px;border-top:1px solid var(--accent-line)}
+.lesson-figure .parts-tree>li>div{display:grid;gap:4px;min-width:0}
+.lesson-figure .part-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.lesson-figure .parts-tree strong{font-size:15px;line-height:1.6;color:var(--ink)}
+.lesson-figure .part-detail{font-size:11px;color:var(--muted)}
+.lesson-figure .appearance-picture{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.lesson-figure .visual-panel-label{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text);margin:0 0 12px}
+.lesson-figure .color-swatch{width:9px;height:9px;border-radius:3px;background:var(--accent);flex-shrink:0}
+html[data-theme="light"] .lesson-figure .swatch-green{background:#267347}
+.lesson-figure .visual-equation{display:flex;align-items:center;justify-content:center;gap:8px 12px;flex-wrap:wrap;margin-top:20px;font-size:11px;color:var(--muted)}
+.lesson-figure .visual-equation>span{padding:4px 8px;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+.lesson-figure .visual-equation>strong{flex-basis:100%;font-size:12px;text-align:center;margin-top:4px}
+.lesson-figure .demo-picture .mock-content{padding:24px}
+.lesson-figure .demo-hint{padding:14px 16px;background:var(--teal-soft);border:1px solid var(--teal-border);border-radius:8px;color:var(--text);font-size:14px;margin:0 0 20px}
+.lesson-figure [hidden]{display:none!important}
+.lesson-figure .demo-button{min-height:46px;font-size:14px;cursor:pointer}
+.lesson-figure .demo-button:hover{background:var(--strong);border-color:var(--strong);color:var(--on-strong)}
+.lesson-figure .demo-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;background:var(--surface-alt);border-top:1px solid var(--rule)}
+.lesson-figure .demo-status{font-size:11px;color:var(--muted)}
+.lesson-figure .demo-reset{flex-shrink:0;min-height:44px;padding:8px 10px;border:1px solid var(--rule);border-radius:7px;background:var(--surface);color:var(--accent);font-size:11px;cursor:pointer}
+.lesson-figure .demo-reset:hover{border-color:var(--accent-line);background:var(--soft)}
+.lesson-figure .event-flow-label{margin:20px 0 10px;font-size:12px;color:var(--muted)}
+.lesson-figure .event-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:0}
+.lesson-figure .event-flow>li{position:relative;display:flex;flex-direction:column;gap:6px;align-items:center;min-width:0;padding:13px 8px;border:1px solid var(--rule);border-radius:9px;background:var(--surface);margin:0;text-align:center}
+.lesson-figure .event-flow>li+li::before{content:"→";position:absolute;left:-12px;top:15px;width:12px;color:var(--accent-line);font-size:13px}
+.lesson-figure .event-flow>li>span{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--soft);color:var(--accent);font:11px Consolas,monospace}
+.lesson-figure .event-flow strong{font-size:12px;line-height:1.6}.lesson-figure .event-flow small{font-size:10px;line-height:1.6;color:var(--muted)}
+.lesson-figure:has([data-lesson-demo][data-shown="true"]) .event-flow>li{border-color:var(--teal-border);background:var(--teal-soft)}
+.lesson-figure .local-boundary{padding:18px;border:1px dashed var(--accent-line);border-radius:13px;background:var(--surface)}
+.lesson-figure .boundary-label{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--accent);margin:0 0 20px}.lesson-figure .boundary-label svg{width:24px;height:24px}
+.lesson-figure .local-flow{display:grid;grid-template-columns:1fr .7fr 1fr;align-items:center;gap:10px}
+.lesson-figure .state-card{position:relative;display:flex;flex-direction:column;gap:14px;padding:20px 16px;border:0;border-radius:3px;background:var(--soft);min-width:0}
+.lesson-figure .state-card strong{font-size:14px;line-height:1.6}
+.lesson-figure .state-visible{--sketch-line:var(--teal);background:var(--teal-soft)}
+.lesson-figure .state-visible .visual-chip{background:var(--surface);border-color:var(--teal-border);color:var(--teal)}
+.lesson-figure .state-label{font-size:11px;color:var(--muted)}
+.lesson-figure .state-change{display:grid;justify-items:center;gap:10px;text-align:center;font-size:10px;color:var(--muted)}
+.lesson-figure .flow-arrow{font-size:28px;line-height:1;color:var(--accent-line)}
+.lesson-figure .scenario-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px}
+.lesson-figure .scenario-badges>span{padding:5px 9px;border:1px solid var(--rule);border-radius:6px;background:var(--surface);font-size:10px;color:var(--muted)}
+.lesson-figure .exchange-picture{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:12px;align-items:center}
+.lesson-figure .exchange-endpoint{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;padding:22px 13px;border:0;border-radius:3px;background:var(--soft);text-align:center;min-width:0;--sketch-line:var(--accent)}
+.lesson-figure .exchange-endpoint>strong{font-size:14px;line-height:1.5}.lesson-figure .exchange-endpoint>span:not(.endpoint-icon){font-size:11px;color:var(--accent)}
+.lesson-figure .exchange-endpoint>small{font-size:10px;line-height:1.75;color:var(--muted)}
+.lesson-figure .server-endpoint{--sketch-line:var(--teal);background:var(--teal-soft)}.lesson-figure .server-endpoint .endpoint-icon{background:repeating-linear-gradient(-48deg,transparent 0 5px,var(--teal-border) 5px 6px);color:var(--teal)}
+.lesson-figure .exchange-routes{display:grid;gap:18px}
+.lesson-figure .exchange-route{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--accent-border);color:var(--accent);font-size:11px;line-height:1.7}
+.lesson-figure .exchange-route b{font:25px/1 Consolas,monospace;flex-shrink:0}.lesson-figure .response{color:var(--teal);border-color:var(--teal-border)}
+.lesson-figure .exchange-result{margin-top:20px;padding:14px 16px;border:1px solid var(--teal-border);border-radius:8px;background:var(--teal-soft);color:var(--text);font-size:12px}
+.lesson-figure .saving-picture{display:grid;grid-template-columns:1fr 88px 1fr;gap:12px;align-items:center}
+.lesson-figure .saving-state{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;padding:25px 16px;border:0;border-radius:3px;background:var(--surface);text-align:center;min-width:0}
+.lesson-figure .saving-state>strong{font-size:15px;line-height:1.6}.lesson-figure .saving-state>span:last-child{font-size:11px;line-height:1.8;color:var(--muted)}
+.lesson-figure .saving-inference{display:grid;justify-items:center;gap:9px;text-align:center}
+.lesson-figure .saving-inference>span{display:grid;place-items:center;width:40px;height:40px;border:1px dashed var(--ochre);border-radius:50%;font:28px/1 var(--font);color:var(--ochre)}
+.lesson-figure .saving-inference>strong{font-size:11px;line-height:1.5;color:var(--muted)}
+.lesson-figure .saving-conclusion{margin-top:18px;padding:13px 16px;border:1px solid var(--accent-border);border-radius:8px;background:var(--soft);font-size:13px;color:var(--text)}
+.visual-transcript{margin:0 0 30px;padding:0;border:1px solid var(--rule);border-radius:8px;background:var(--surface)}
+.visual-transcript>summary{padding:12px 16px;font-size:11px;line-height:1.7;color:var(--accent);min-height:44px}
+.visual-transcript>.diagram-frame{margin:0 12px 12px}
+/* Рисованная подача по образцу иллюстраций конкретного курса Stepik.
+   Длинные пояснения остаются обычным шрифтом; рукописный — для коротких подписей. */
+.lesson-figure svg.sketch-frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;color:var(--sketch-line);z-index:1}
+.lesson-figure .sketch-frame path{stroke:currentColor;stroke-width:1.45px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
+.lesson-figure .sketch-frame .sketch-second-stroke{stroke-width:.8px;opacity:.38}
+.lesson-figure .visual-icon>svg,.lesson-figure .part-icon>svg{width:44px;height:44px}
+.lesson-figure .endpoint-icon{width:86px;height:76px}
+.lesson-figure .endpoint-icon>svg{width:65px;height:65px}
+.lesson-figure .roles-branches::before,.lesson-figure .roles-branches::after,.lesson-figure .parts-tree,.lesson-figure .parts-tree>li::before{border-color:var(--ink);border-width:1.5px}
+.lesson-figure .roles-branches>span{background:var(--ink);width:1.5px}
+.lesson-figure .roles-processing{font:700 14px/1.7 var(--sketch-font)}
+.lesson-figure .roles-processing>span,.lesson-figure .flow-arrow{font:36px/1 var(--sketch-font);color:var(--ink)}
+.lesson-figure .role-purpose{font-size:14px;line-height:1.65}
+.lesson-figure .role-example{border-top:1px dashed var(--role-border)}
+.lesson-figure .role-example>span{color:var(--role-color)}
+.lesson-figure .visual-chip{font-size:11px;border-style:dashed;border-radius:3px;background:var(--surface)}
+.lesson-figure .visual-panel-label,.lesson-figure .parts-tree strong,.lesson-figure .exchange-endpoint>strong,.lesson-figure .saving-state>strong,.lesson-figure .state-card>strong{font-family:var(--sketch-font);font-weight:700}
+.lesson-figure .part-label{font-family:var(--sketch-font);font-weight:700;letter-spacing:0;text-transform:none;color:var(--accent)}
+.lesson-figure .parts-tree>li:nth-child(2){--sketch-line:var(--teal)}
+.lesson-figure .parts-tree>li:nth-child(2) .part-icon{color:var(--teal);background:repeating-linear-gradient(-48deg,transparent 0 5px,var(--teal-border) 5px 6px),var(--teal-soft)}
+.lesson-figure .parts-tree>li:nth-child(3){--sketch-line:var(--ochre)}
+.lesson-figure .parts-tree>li:nth-child(3) .part-icon{color:var(--ochre);background:repeating-linear-gradient(-48deg,transparent 0 5px,var(--ochre-border) 5px 6px),var(--ochre-soft)}
+.lesson-figure .mock-chrome{margin:0 3px;padding:11px 12px;background:transparent;border-bottom:1.5px solid var(--ink);font-family:var(--sketch-font);color:var(--ink)}
+.lesson-figure .mock-dots i{width:5px;height:5px;background:transparent;border:1px solid var(--ink);border-radius:45% 55% 40% 60%}
+.lesson-figure .demo-picture{--sketch-line:var(--ochre)}
+.lesson-figure .demo-hint{border-style:dashed;border-radius:3px}
+.lesson-figure .event-flow>li{border-radius:3px 7px 4px 9px;border:1.5px solid var(--ink)}
+.lesson-figure .event-flow>li>span{font:700 14px/1 var(--sketch-font);background:var(--ochre-soft);color:var(--ochre)}
+.lesson-figure .event-flow>li+li::before{color:var(--ink);font-size:18px;background:var(--surface)}
+.lesson-figure .local-boundary{border-radius:6px 13px 4px 11px;border-width:1.5px;background:transparent}
+.lesson-figure .boundary-label{font:700 14px/1.7 var(--sketch-font)}
+.lesson-figure .exchange-route{border:0;padding-bottom:0}
+.lesson-figure .exchange-route b{font:38px/1 var(--sketch-font)}
+.lesson-figure .exchange-route strong{font:700 15px/1.7 var(--sketch-font)}
+.lesson-figure .saving-state:last-child{--sketch-line:var(--ochre);background:var(--ochre-soft)}
+.lesson-figure .saving-state:last-child .endpoint-icon{color:var(--ochre);background:repeating-linear-gradient(-48deg,transparent 0 5px,var(--ochre-border) 5px 6px)}
+.lesson-figure .saving-inference>span{width:52px;height:52px;font:700 34px/1 var(--sketch-font);border:1.5px dashed var(--ochre);border-radius:45% 55% 49% 51%}
+.lesson-figure .saving-conclusion,.lesson-figure .exchange-result{border-left:3px solid var(--accent);border-radius:0 5px 5px 0}
+@media(max-width:1100px){.lesson-figure{padding:20px}}
+@media(max-width:600px){
+ .lesson-figure{padding:18px 16px;margin-top:28px}.lesson-figure .visual-title{font-size:21px}.lesson-figure figcaption{margin-bottom:20px}
+ .lesson-figure .role-cards{grid-template-columns:1fr;gap:10px;margin-top:0}.lesson-figure .roles-branches{display:none}.lesson-figure .roles-processing{margin-top:18px}
+ .lesson-figure .role-card{display:grid;grid-template-columns:44px minmax(0,1fr);gap:6px 14px;align-items:center;text-align:left;padding:18px 15px;border:0}.lesson-figure .role-card>.visual-icon{width:44px;height:54px}.lesson-figure .role-card>.visual-icon>svg{width:36px;height:36px}
+ .lesson-figure .role-card .visual-icon{grid-row:1/4}.lesson-figure .role-card>span:last-child{grid-column:2}.lesson-figure .role-card br{display:none}.lesson-figure .role-purpose,.lesson-figure .role-example{grid-column:2}.lesson-figure .role-example{padding-top:9px}.lesson-figure .role-card>strong{grid-column:2}
+ .lesson-figure .parts-tree{margin-left:19px;padding-left:16px}.lesson-figure .parts-tree>li{padding:13px 11px;gap:10px}.lesson-figure .parts-tree>li::before{left:-17px;width:16px}.lesson-figure .part-icon{width:33px;height:36px;border-radius:8px}.lesson-figure .part-icon svg{width:23px;height:23px}.lesson-figure .parts-tree strong{font-size:14px}
+ .lesson-figure .appearance-picture{grid-template-columns:1fr;gap:22px}.lesson-figure .mock-content{padding:20px}.lesson-figure .mock-heading{font-size:25px}
+ .lesson-figure .demo-picture .mock-content{padding:20px}.lesson-figure .demo-toolbar{flex-direction:column;align-items:flex-start;gap:8px}.lesson-figure .demo-reset{font-size:12px}.lesson-figure .event-flow{grid-template-columns:1fr;gap:14px}.lesson-figure .event-flow>li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:3px 10px;text-align:left;align-items:center;padding:12px 14px}.lesson-figure .event-flow>li>span{grid-row:1/3}.lesson-figure .event-flow>li>small{grid-column:2}.lesson-figure .event-flow>li+li::before{content:"↓";left:25px;top:-17px;width:14px;height:14px;font-size:14px}
+ .lesson-figure .local-boundary{padding:14px}.lesson-figure .local-flow{grid-template-columns:1fr;gap:14px}.lesson-figure .state-change{display:flex;align-items:center;justify-content:center;text-align:left;gap:15px;font-size:11px}.lesson-figure .state-change .flow-arrow{transform:rotate(90deg)}.lesson-figure .state-change br{display:none}.lesson-figure .state-card{padding:16px;gap:12px}
+ .lesson-figure .exchange-picture{grid-template-columns:1fr;gap:16px}.lesson-figure .exchange-endpoint{padding:20px}.lesson-figure .exchange-routes{grid-column:1;grid-row:2;grid-template-columns:1fr 1fr;gap:12px}.lesson-figure .server-endpoint{grid-column:1;grid-row:3}.lesson-figure .exchange-route{flex-direction:column;justify-content:center;text-align:center;min-height:115px;padding:12px 8px;font-size:11px}.lesson-figure .exchange-route>b{transform:rotate(90deg)}
+ .lesson-figure .saving-picture{grid-template-columns:1fr;gap:15px}.lesson-figure .saving-state{padding:20px}.lesson-figure .saving-state>span:last-child{font-size:12px}
+}
+
+/* Подписи участвуют в объяснении, поэтому их не уменьшаем до декоративного текста. */
+.lesson-figure .visual-kicker{font-size:11px}.lesson-figure .visual-note{font-size:13px}
+.lesson-figure .visual-chip,.lesson-figure .mock-footnote,.lesson-figure .part-label,.lesson-figure .part-detail{font-size:11px}
+.lesson-figure .mock-chrome{font-size:11px}.lesson-figure .visual-panel-label{font-size:13px}
+.lesson-figure .state-label,.lesson-figure .exchange-endpoint>span:not(.endpoint-icon),.lesson-figure .exchange-route,.lesson-figure .exchange-endpoint>small{font-size:12px}
+.lesson-figure .event-flow small{font-size:11px}.lesson-figure .demo-status,.lesson-figure .demo-reset{font-size:12px}
+
+/* Модуль 1: крупные собственные рисунки, короткие живые подписи. */
+.lesson-figure .intro-forms,.lesson-figure .intro-pair{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.lesson-figure .intro-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+.lesson-figure .intro-card{--intro-color:var(--accent);--intro-soft:var(--soft);--intro-hatch:var(--accent-border);--sketch-line:var(--intro-color);position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;min-width:0;padding:22px 16px 26px;background:var(--intro-soft);text-align:center}
+.lesson-figure .intro-teal{--intro-color:var(--teal);--intro-soft:var(--teal-soft);--intro-hatch:var(--teal-border)}
+.lesson-figure .intro-ochre{--intro-color:var(--ochre);--intro-soft:var(--ochre-soft);--intro-hatch:var(--ochre-border)}
+.lesson-figure .intro-art{display:grid;place-items:center;width:100px;height:96px;max-width:100%;background:repeating-linear-gradient(-48deg,transparent 0 7px,var(--intro-hatch) 7px 8px);border-radius:46% 54% 45% 52%;color:var(--intro-color)}
+.lesson-figure svg.intro-drawing{width:90px;height:90px;max-width:100%}
+.lesson-figure .intro-label{color:var(--intro-color);font:700 18px/1.65 var(--sketch-font)}
+.lesson-figure .intro-message{display:block;width:100%;color:var(--ink);font-size:15px;line-height:1.8}
+.lesson-figure .intro-result{width:100%;padding-top:12px;border-top:1px dashed var(--intro-color);color:var(--text);font-size:14px;line-height:1.7}
+.lesson-figure .intro-takeaway{margin-top:20px;color:var(--ink);font-size:15px;font-weight:600;line-height:1.8}
+.lesson-figure .intro-transfer{display:grid;grid-template-columns:minmax(0,1fr) 92px minmax(0,1fr);gap:12px;align-items:center}
+.lesson-figure .intro-link{display:grid;justify-items:center;gap:10px;text-align:center;color:var(--text);font-size:13px;line-height:1.7}
+.lesson-figure .intro-arrow{align-self:center;text-align:center;color:var(--ink);font:32px/1.2 var(--sketch-font)}
+.lesson-figure .intro-process{display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr) 20px minmax(0,1fr);gap:6px;align-items:stretch}
+.lesson-figure .intro-process .intro-card{padding:18px 12px 24px}
+@media(max-width:760px){
+ .lesson-figure .intro-forms,.lesson-figure .intro-pair,.lesson-figure .intro-transfer,.lesson-figure .intro-process{grid-template-columns:minmax(0,1fr);gap:16px}
+ .lesson-figure .intro-forms .intro-card{display:grid;grid-template-columns:72px minmax(0,1fr);text-align:left;gap:8px 14px;padding:20px 16px}
+ .lesson-figure .intro-forms .intro-art{grid-row:1/3;width:72px;height:78px}
+ .lesson-figure .intro-forms svg.intro-drawing{width:70px;height:70px}
+ .lesson-figure .intro-forms .intro-message{grid-column:2;font-size:14px}
+ .lesson-figure .intro-label{font-size:18px}
+ .lesson-figure .intro-link{gap:4px}
+ .lesson-figure .intro-link>span:first-child br{display:none}
+ .lesson-figure .intro-arrow{transform:rotate(90deg);justify-self:center}
+}
+/* Урок 1.2: устройство окружает видимое окно, содержание находится внутри. */
+.lesson-figure .device-scene{max-width:580px;margin:0 auto;padding:8px 4px 18px}
+.lesson-figure .device-monitor{border:3px solid var(--accent);outline:1px solid var(--accent-border);outline-offset:4px;border-radius:12px 15px 10px 14px;padding:16px;background:var(--soft);transform:rotate(-.3deg)}
+.lesson-figure .device-caption{display:block;margin-bottom:12px;color:var(--accent);font:700 20px/1.5 var(--sketch-font)}
+.lesson-figure .device-display{padding:18px;background:var(--paper);border:2px solid var(--accent-border);border-radius:5px}
+.lesson-figure .device-window{border:2px solid var(--teal);border-radius:6px;background:var(--teal-soft);overflow:hidden}
+.lesson-figure .device-window-bar{padding:10px 14px;border-bottom:1px dashed var(--teal);color:var(--teal);font:700 17px/1.6 var(--sketch-font)}
+.lesson-figure .device-content{margin:16px;padding:14px;border:1px solid var(--ochre-border);background:var(--ochre-soft);color:var(--ink);font-size:14px;line-height:1.7;text-align:left}
+.lesson-figure .device-content>span{font-weight:600}
+.lesson-figure .device-content p{margin:12px 0 0;font:18px/1.8 var(--sketch-font)}
+.lesson-figure .device-stand{height:28px;width:100px;margin:auto;border-left:3px solid var(--accent);border-right:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:perspective(60px) rotateX(15deg)}
+@media(max-width:600px){.lesson-figure .device-monitor{padding:12px}.lesson-figure .device-display{padding:8px}.lesson-figure .device-content{margin:10px;padding:10px}.lesson-figure .device-window-bar{padding:8px;font-size:16px}}

@@ -1,0 +1,45 @@
+/* Локальные дополнения модуля 3; прежние фигуры не затрагиваются. */
+html[data-theme] .visual-module-3 .m3-two,html[data-theme] .visual-module-3 .m3-three{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+html[data-theme] .visual-module-3 .m3-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+html[data-theme] .visual-module-3 .m3-card{--m3-color:var(--accent);--m3-soft:var(--soft);display:flex;flex-direction:column;gap:14px;align-items:flex-start;min-width:0;padding:20px 14px;border:1px solid var(--rule);border-top:3px solid var(--m3-color);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-3 .m3-teal{--m3-color:var(--teal);--m3-soft:var(--teal-soft)}
+html[data-theme] .visual-module-3 .m3-ochre{--m3-color:var(--ochre);--m3-soft:var(--ochre-soft)}
+html[data-theme] .visual-module-3 .m3-label{display:block;font:700 17px/1.45 var(--font);color:var(--m3-color,var(--ink));overflow-wrap:anywhere}
+html[data-theme] .visual-module-3 .m3-card p{font:400 14px/1.75 var(--font);color:var(--text)}
+html[data-theme] .visual-module-3 .m3-small{display:block;font:400 12px/1.65 var(--font);color:var(--muted)}
+html[data-theme] .visual-module-3 .m3-copy{align-self:stretch;padding:14px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-alt);font:400 15px/1.75 var(--font);color:var(--ink);overflow-wrap:anywhere}
+html[data-theme] .visual-module-3 .m3-hardware-image{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border:0;border-radius:8px;background:#fff;margin:0;align-self:stretch}
+html[data-theme] .visual-module-3 .m3-arrow{align-self:center;justify-self:center;font:400 24px/1 var(--font);color:var(--accent)}
+@container(max-width:560px){html[data-theme] .visual-module-3 .m3-three{grid-template-columns:minmax(0,1fr)}}
+@container(max-width:480px){html[data-theme] .visual-module-3 .m3-two{grid-template-columns:minmax(0,1fr)}}
+
+@container(min-width:561px){html[data-theme] .visual-module-3[data-visual="m3-hardware-roles"] .m3-label{min-height:2.9em;display:grid;align-items:center}}
+html[data-theme] .visual-module-3 .m3-program-note{padding:16px 18px;margin:0 0 18px;background:var(--soft);border:1px solid var(--accent-border);border-radius:10px;color:var(--ink);font-size:14px}
+html[data-theme] .visual-module-3 .m3-flow-three{display:grid;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr);gap:8px;align-items:stretch}
+html[data-theme] .visual-module-3 .m3-flow-three>.m3-card{padding:18px 12px}
+html[data-theme] .visual-module-3 .m3-flow-three .m3-arrow{font-size:22px}
+html[data-theme] .visual-module-3 .m3-comparison{display:grid;gap:16px}
+html[data-theme] .visual-module-3 .m3-comparison+.m3-comparison{margin-top:22px;padding-top:22px;border-top:1px solid var(--rule)}
+html[data-theme] .visual-module-3 .m3-equation{font:600 22px/1.5 var(--font);color:var(--ink)}
+@container(max-width:560px){html[data-theme] .visual-module-3 .m3-flow-three{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-3 .m3-flow-three>.m3-arrow{transform:rotate(90deg)}}
+html[data-theme] .visual-module-3 .m3-ram-hero{max-width:580px;margin:0 auto 20px;border:1px solid var(--rule);border-radius:12px;overflow:hidden;background:white}
+html[data-theme] .visual-module-3 .m3-ram-hero .m3-hardware-image{aspect-ratio:3/1;object-fit:cover;border-radius:0}
+html[data-theme] .visual-module-3 .m3-use-list{display:grid;gap:12px;list-style:none;padding:0;margin:0}
+html[data-theme] .visual-module-3 .m3-use-list li{display:grid;gap:8px;padding:16px 18px;margin:0;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+html[data-theme] .visual-module-3 .m3-use-list strong{font-size:15px;line-height:1.55;color:var(--ink)}
+html[data-theme] .visual-module-3 .m3-use-list span{font-size:14px;line-height:1.7;color:var(--text)}
+html[data-theme] .visual-module-3 .m3-flow-two{display:grid;grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr);gap:12px;align-items:stretch}
+html[data-theme] .visual-module-3 .m3-flow-two>.m3-card{padding:18px 12px}
+html[data-theme] .visual-module-3 .m3-storage-root{padding:20px 16px;border:1px solid var(--rule);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-3 .m3-storage-device{display:grid;justify-items:center;gap:10px;margin:0 auto 20px;max-width:260px;text-align:center}
+html[data-theme] .visual-module-3 .m3-storage-device .m3-hardware-image{max-width:260px}
+@container(max-width:560px){html[data-theme] .visual-module-3 .m3-flow-two{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-3 .m3-flow-two>.m3-arrow{transform:rotate(90deg)}}
+@container(max-width:480px){html[data-theme] .visual-module-3 .m3-storage-root{padding:18px 12px}}
+html[data-theme] .visual-module-3 .m3-cases{display:grid;gap:14px}
+html[data-theme] .visual-module-3 .m3-case-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:18px;padding:18px 16px;border:1px solid var(--rule);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-3 .m3-case-row>div{min-width:0}
+html[data-theme] .visual-module-3 .m3-case-row p{margin-top:10px;font-size:14px;line-height:1.75}
+html[data-theme] .visual-module-3 .m3-case-row .m3-copy{margin-top:10px}
+@container(max-width:480px){html[data-theme] .visual-module-3 .m3-case-row{grid-template-columns:minmax(0,1fr);padding:18px 14px}}
+html[data-theme] .visual-module-3 .m3-effect-scope{font:600 14px/1.65 var(--font);color:var(--teal)}
+html[data-theme] .visual-module-3 .m3-case-row .m3-small+.m3-label{margin-top:8px}

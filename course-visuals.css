@@ -1,0 +1,25 @@
+/* Общая основа новых модулей; прежние visual-module-1–6 не затрагиваются. */
+html[data-theme] .prose:has(.course-visual) :not(pre)>code{white-space:normal;overflow-wrap:anywhere}
+html[data-theme] .course-visual .cv-two,html[data-theme] .course-visual .cv-three{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+html[data-theme] .course-visual .cv-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+html[data-theme] .course-visual .cv-card{--cv-color:var(--accent);display:flex;flex-direction:column;gap:14px;min-width:0;padding:20px 16px;border:1px solid var(--rule);border-top:3px solid var(--cv-color);border-radius:12px;background:var(--surface)}
+html[data-theme] .course-visual .cv-teal{--cv-color:var(--teal)}
+html[data-theme] .course-visual .cv-ochre{--cv-color:var(--ochre)}
+html[data-theme] .course-visual .cv-label{display:block;font:700 17px/1.5 var(--font);color:var(--cv-color,var(--ink));overflow-wrap:anywhere}
+html[data-theme] .course-visual .cv-small{display:block;font:400 13px/1.75 var(--font);color:var(--muted);overflow-wrap:anywhere}
+html[data-theme] .course-visual .cv-card p{font:400 14px/1.8 var(--font);color:var(--text)}
+html[data-theme] .course-visual .cv-copy{padding:14px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-alt);font:500 15px/1.8 var(--font);color:var(--ink);overflow-wrap:anywhere}
+html[data-theme] .course-visual .cv-copy code{padding:0;border:0;background:transparent;font:500 15px/1.8 Consolas,monospace;color:var(--ink);white-space:normal;overflow-wrap:anywhere}
+html[data-theme] .course-visual .cv-flow{display:grid;grid-template-columns:minmax(0,1fr) 100px minmax(0,1fr);gap:12px}
+html[data-theme] .course-visual .cv-link{align-self:center;display:grid;gap:12px;text-align:center;min-width:0}
+html[data-theme] .course-visual .cv-arrow{font:400 26px/1 var(--font);color:var(--accent)}
+html[data-theme] .course-visual .cv-boundary{padding:20px 16px;border:1px solid var(--accent-border);border-radius:12px;background:var(--soft)}
+html[data-theme] .course-visual .cv-boundary>.cv-label{margin-bottom:20px}
+html[data-theme] .course-visual .cv-space{margin-top:22px}
+html[data-theme] .course-visual .cv-record{display:block;padding:18px 14px;border:1px solid var(--accent-border);border-radius:10px;background:var(--surface);font:500 15px/1.9 Consolas,monospace;color:var(--accent);white-space:pre-wrap;overflow-wrap:anywhere}
+html[data-theme] .course-visual .action-sequence{margin-bottom:22px}
+html[data-theme] .diagram-frame.course-source{background:var(--surface-alt);border:1px solid var(--rule);border-radius:10px;clip-path:none;box-shadow:none}
+html[data-theme] .diagram-frame.course-source::before{display:none}
+html[data-theme] .prose .diagram-frame.course-source pre{background:var(--surface-alt);color:var(--ink);border:0;clip-path:none;box-shadow:none}
+@container(max-width:560px){html[data-theme] .course-visual .cv-three,html[data-theme] .course-visual .cv-flow{grid-template-columns:minmax(0,1fr)}html[data-theme] .course-visual .cv-flow>.cv-link>.cv-arrow{transform:rotate(90deg)}}
+@container(max-width:480px){html[data-theme] .course-visual .cv-two{grid-template-columns:minmax(0,1fr)}html[data-theme] .course-visual .cv-card{padding:18px 12px}}

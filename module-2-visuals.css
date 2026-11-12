@@ -1,0 +1,53 @@
+/* Добавления модуля 2. Общая оболочка visual-modern остаётся прежней. */
+html[data-theme] .visual-module-2 .m2-two,html[data-theme] .visual-module-2 .m2-three{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+html[data-theme] .visual-module-2 .m2-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+html[data-theme] .visual-module-2 .m2-card{--m2-color:var(--accent);--m2-soft:var(--soft);display:flex;flex-direction:column;align-items:flex-start;gap:14px;min-width:0;padding:20px 16px;border:1px solid var(--rule);border-top:3px solid var(--m2-color);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-2 .m2-teal{--m2-color:var(--teal);--m2-soft:var(--teal-soft)}
+html[data-theme] .visual-module-2 .m2-ochre{--m2-color:var(--ochre);--m2-soft:var(--ochre-soft)}
+html[data-theme] .visual-module-2 .m2-label{display:block;font:700 17px/1.45 var(--font);color:var(--m2-color,var(--ink));overflow-wrap:anywhere}
+html[data-theme] .visual-module-2 .m2-card p{font:400 14px/1.75 var(--font);color:var(--text)}
+html[data-theme] .visual-module-2 .m2-icon{display:grid;place-items:center;flex-shrink:0;width:52px;height:52px;background:var(--m2-soft,var(--soft));color:var(--m2-color,var(--accent));border-radius:12px}
+html[data-theme] .visual-module-2 .m2-icon svg{width:32px;height:32px}
+html[data-theme] .visual-module-2 .m2-small{display:block;font-size:12px;line-height:1.65;color:var(--muted)}
+html[data-theme] .visual-module-2 .m2-copy{align-self:stretch;padding:14px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-alt);font:400 16px/1.65 var(--font);color:var(--ink);overflow-wrap:anywhere}
+html[data-theme] .visual-module-2 .m2-arrow{align-self:center;justify-self:center;font:400 24px/1 var(--font);color:var(--accent)}
+@container(max-width:560px){html[data-theme] .visual-module-2 .m2-three{grid-template-columns:minmax(0,1fr)}}
+@container(max-width:480px){html[data-theme] .visual-module-2 .m2-two{grid-template-columns:minmax(0,1fr)}}
+html[data-theme] .visual-module-2 .m2-file{align-self:stretch;width:100%;border:1px solid var(--rule);border-radius:10px;background:var(--surface);overflow:hidden;min-width:0}
+html[data-theme] .visual-module-2 .m2-file-name{display:flex;align-items:center;gap:12px;padding:14px;background:var(--soft);border-bottom:1px solid var(--rule);min-width:0}
+html[data-theme] .visual-module-2 .m2-file-name>div{min-width:0}
+html[data-theme] .visual-module-2 .m2-file-name .m2-icon{width:40px;height:40px;background:var(--surface)}
+html[data-theme] .visual-module-2 .m2-file-name .m2-icon svg{width:26px;height:26px}
+html[data-theme] .visual-module-2 .m2-filename{display:block;font:600 16px/1.5 var(--font);color:var(--ink);overflow-wrap:anywhere}
+html[data-theme] .visual-module-2 .m2-file-body{padding:14px}
+html[data-theme] .visual-module-2 .m2-file-body .m2-copy{margin-top:8px}
+html[data-theme] .visual-module-2 .m2-explanations{margin-top:16px}
+html[data-theme] .visual-module-2 .m2-save-flow{display:grid;grid-template-columns:minmax(0,1fr) 74px minmax(0,1fr);gap:12px;align-items:stretch}
+html[data-theme] .visual-module-2 .m2-save-flow>.m2-card{padding:18px 12px}
+html[data-theme] .visual-module-2 .m2-link{display:grid;align-content:center;justify-items:center;gap:12px;text-align:center;font-size:12px;line-height:1.7;color:var(--muted)}
+@container(max-width:560px){html[data-theme] .visual-module-2 .m2-save-flow{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-2 .m2-link .m2-arrow{transform:rotate(90deg)}}
+html[data-theme] .visual-module-2 .m2-path{display:flex;flex-wrap:wrap;gap:6px;align-items:center;list-style:none;margin:0;padding:0;font:400 12px/1.65 var(--font);color:var(--muted)}
+html[data-theme] .visual-module-2 .m2-path li{display:flex;align-items:baseline;gap:6px;min-width:0;margin:0;padding:0}
+html[data-theme] .visual-module-2 .m2-path li>span:last-child{overflow-wrap:anywhere}
+html[data-theme] .visual-module-2 .m2-path li:last-child{color:var(--accent);font-weight:600}
+html[data-theme] .visual-module-2 .m2-object{display:flex;align-items:center;gap:12px;min-width:0}
+html[data-theme] .visual-module-2 .m2-object>div{min-width:0}
+html[data-theme] .visual-module-2 .m2-object .m2-icon{width:42px;height:42px}
+html[data-theme] .visual-module-2 .m2-object .m2-icon svg{width:28px;height:28px}
+html[data-theme] .visual-module-2 .m2-folder-root{padding:20px 16px;background:var(--surface);border:1px solid var(--rule);border-radius:12px}
+html[data-theme] .visual-module-2 .m2-folder-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));list-style:none;padding:20px 0 0;margin:20px 0 0;border-top:1px solid var(--rule);gap:16px}
+html[data-theme] .visual-module-2 .m2-folder-branches>li{min-width:0;margin:0;padding:0}
+html[data-theme] .visual-module-2 .m2-folder-files{list-style:none;margin:14px 0 0 10px;padding:0 0 0 14px;border-left:1px solid var(--accent-border)}
+html[data-theme] .visual-module-2 .m2-folder-files>li{margin:0;padding:10px 0}
+html[data-theme] .visual-module-2 .m2-folder-files .m2-icon{background:var(--surface-alt);color:var(--muted)}
+html[data-theme] .visual-module-2 .m2-operation{padding:18px 0 0}
+html[data-theme] .visual-module-2 .m2-operation:first-of-type{padding-top:0}
+html[data-theme] .visual-module-2 .m2-operation+.m2-operation{margin-top:22px;border-top:1px solid var(--rule)}
+html[data-theme] .visual-module-2 .m2-scenario{font-size:14px;line-height:1.75;margin:10px 0 16px}
+@container(max-width:480px){html[data-theme] .visual-module-2 .m2-folder-branches{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-2 .m2-folder-root{padding:18px 12px}}
+html[data-theme] .visual-module-2 .m2-fullname{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;padding:26px 16px;margin-bottom:18px;border:1px solid var(--rule);border-radius:12px;background:var(--surface);color:var(--ink);font:700 30px/1.4 var(--font)}
+html[data-theme] .visual-module-2 .m2-extension{color:var(--teal);font-weight:700;background:var(--teal-soft);border-radius:4px;padding:2px 3px}
+html[data-theme] .visual-module-2 .m2-transform-stage{align-self:stretch;padding:14px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-alt)}
+html[data-theme] .visual-module-2 .m2-transform-stage p{margin-top:8px;font-size:13px}
+html[data-theme] .visual-module-2 .m2-transform-action{align-self:stretch;display:grid;justify-items:center;gap:8px;padding:4px 0;font-size:12px;line-height:1.65;color:var(--muted);text-align:center}
+html[data-theme] .visual-module-2 .m2-transform-action>span:last-child{font-size:24px;line-height:1;color:var(--accent)}

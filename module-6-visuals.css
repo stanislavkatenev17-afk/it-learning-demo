@@ -1,0 +1,36 @@
+/* Локальный слой модуля 6: схемы ролей, направлений и состояний. */
+html[data-theme] .visual-module-6 .m6-two,html[data-theme] .visual-module-6 .m6-three{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+html[data-theme] .visual-module-6 .m6-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+html[data-theme] .visual-module-6 .m6-card{--m6-color:var(--accent);display:flex;flex-direction:column;gap:14px;min-width:0;padding:20px 16px;border:1px solid var(--rule);border-top:3px solid var(--m6-color);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-6 .m6-teal{--m6-color:var(--teal)}
+html[data-theme] .visual-module-6 .m6-ochre{--m6-color:var(--ochre)}
+html[data-theme] .visual-module-6 .m6-label{display:block;font:700 17px/1.45 var(--font);color:var(--m6-color,var(--ink));overflow-wrap:anywhere}
+html[data-theme] .visual-module-6 .m6-small{display:block;font:400 13px/1.7 var(--font);color:var(--muted);overflow-wrap:anywhere}
+html[data-theme] .visual-module-6 .m6-card p{font:400 14px/1.75 var(--font);color:var(--text)}
+html[data-theme] .visual-module-6 .m6-copy{padding:14px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-alt);font:500 15px/1.75 var(--font);color:var(--ink);overflow-wrap:anywhere}
+html[data-theme] .visual-module-6 .m6-arrow{display:block;font:400 24px/1 var(--font);color:var(--accent);text-align:center}
+html[data-theme] .visual-module-6 .m6-flow{display:grid;grid-template-columns:minmax(0,1fr) 140px minmax(0,1fr);gap:12px}
+html[data-theme] .visual-module-6 .m6-link{align-self:center;display:grid;gap:12px;text-align:center;min-width:0}
+html[data-theme] .visual-module-6 .m6-relation{padding:22px 10px;font:500 15px/1.8 var(--font);color:var(--teal);text-align:center;overflow-wrap:anywhere}
+html[data-theme] .visual-module-6 .m6-spaced{margin-top:22px}
+html[data-theme] .visual-module-6 .m6-boundary{padding:20px 16px;border:1px solid var(--accent-border);border-radius:12px;background:var(--soft)}
+html[data-theme] .visual-module-6 .m6-boundary>.m6-label{margin-bottom:20px}
+html[data-theme] .visual-module-6 .m6-vertical{padding:20px 8px}
+html[data-theme] .visual-module-6 .m6-exchange{display:grid;grid-template-columns:minmax(0,1fr) 160px minmax(0,1fr);gap:12px}
+html[data-theme] .visual-module-6 .m6-messages{align-self:center;display:grid;gap:32px;min-width:0}
+html[data-theme] .visual-module-6 .m6-copy code{padding:0;background:transparent;border:0;font:500 16px/1.75 Consolas,monospace;color:var(--ink);white-space:nowrap}
+html[data-theme] .visual-module-6 .m6-address-record{padding:24px 12px;display:grid;gap:24px;border:1px solid var(--rule);border-radius:12px;background:var(--surface);text-align:center}
+html[data-theme] .visual-module-6 code.m6-ipv4{display:flex;justify-content:center;gap:6px;padding:0;border:0;background:transparent;font:500 28px/1.5 Consolas,monospace;color:var(--accent)}
+html[data-theme] .visual-module-6 .m6-ipv4>span{border-bottom:2px solid var(--accent-border);padding:0 4px}
+html[data-theme] .visual-module-6 .m6-ipv4>b{font-weight:400}
+html[data-theme] .visual-module-6 .m6-task{padding-top:18px;border-top:1px solid var(--rule)}
+html[data-theme] .visual-module-6 .m6-task>.m6-label{margin-bottom:18px}
+@container(min-width:561px){html[data-theme] .visual-module-6[data-visual="m6-cloud-three-versions"] .m6-three{grid-template-rows:repeat(8,auto)}html[data-theme] .visual-module-6[data-visual="m6-cloud-three-versions"] .m6-three>.m6-card{grid-row:span 8;display:grid;grid-template-rows:subgrid}}
+@container(max-width:480px){html[data-theme] .visual-module-6 .m6-two>.m6-boundary{padding:18px 10px}html[data-theme] .visual-module-6 code.m6-ipv4{font-size:24px;gap:4px}}
+@container(max-width:560px){html[data-theme] .visual-module-6 .m6-exchange{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-6 .m6-messages{padding:8px 0}html[data-theme] .visual-module-6 .m6-messages .m6-arrow{transform:rotate(90deg)}}
+html[data-theme] .visual-module-6 .action-sequence{margin-bottom:22px}
+html[data-theme] .diagram-frame.m6-source{background:var(--surface-alt);border:1px solid var(--rule);border-radius:10px;clip-path:none;box-shadow:none}
+html[data-theme] .diagram-frame.m6-source::before{display:none}
+html[data-theme] .prose .diagram-frame.m6-source pre{background:var(--surface-alt);color:var(--ink);border:0;clip-path:none;box-shadow:none}
+@container(max-width:560px){html[data-theme] .visual-module-6 .m6-three,html[data-theme] .visual-module-6 .m6-flow{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-6 .m6-flow>.m6-link .m6-arrow{transform:rotate(90deg)}}
+@container(max-width:480px){html[data-theme] .visual-module-6 .m6-two{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-6 .m6-card{padding:18px 12px}}
