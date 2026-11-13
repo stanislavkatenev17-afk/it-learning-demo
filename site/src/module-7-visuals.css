@@ -1,0 +1,51 @@
+/* Семь фигур 7.5: прежняя логика, чистые границы и типографика сайта. */
+@container(min-width:561px){html[data-theme] .visual-module-7[data-visual="m7-tls-properties"] .cv-three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+html[data-theme] .visual-module-7 :is(.role-card,.structure-root,.mock-browser,.demo-picture,.parts-tree>li,.state-card,.exchange-endpoint,.saving-state){border:1px solid var(--rule);border-radius:12px;background:var(--surface);box-shadow:none}
+html[data-theme] .visual-module-7 :is(.visual-icon,.part-icon,.endpoint-icon){border-radius:12px;background:var(--soft);color:var(--accent)}
+html[data-theme] .visual-module-7 .role-card{padding:20px 14px;gap:16px;border-top:3px solid var(--role-color);display:flex;align-items:stretch;text-align:left}
+html[data-theme] .visual-module-7 .role-card>.visual-icon{align-self:flex-start;background:var(--role-soft);color:var(--role-color)}
+html[data-theme] .visual-module-7 .role-card>strong{font:700 20px/1.5 var(--font)}
+html[data-theme] .visual-module-7 .role-example{border-top:1px solid var(--rule)}
+html[data-theme] .visual-module-7 :is(.roles-processing,.visual-panel-label,.part-label,.boundary-label,.exchange-route strong){font-family:var(--font);font-weight:600}
+html[data-theme] .visual-module-7 :is(.role-purpose,.state-card strong,.saving-state>strong,.exchange-endpoint>strong){font-size:15px;line-height:1.7}
+html[data-theme] .visual-module-7 :is(.part-detail,.state-label,.scenario-badges>span,.demo-status,.demo-reset,.event-flow small,.exchange-endpoint>small,.saving-state>span:last-child){font-size:13px;line-height:1.75}
+html[data-theme] .visual-module-7 .parts-tree>li:nth-child(2) .part-icon{background:var(--teal-soft);color:var(--teal)}
+html[data-theme] .visual-module-7 .parts-tree>li:nth-child(3) .part-icon{background:var(--ochre-soft);color:var(--ochre)}
+html[data-theme] .visual-module-7 :is(.roles-branches::before,.roles-branches::after,.parts-tree,.parts-tree>li::before){border-color:var(--accent-line);border-width:1px}
+html[data-theme] .visual-module-7 .roles-branches>span{background:var(--accent-line);width:1px}
+html[data-theme] .visual-module-7 .mock-chrome{margin:0;padding:12px;border-bottom:1px solid var(--rule);background:var(--surface-alt);font:500 12px/1.6 var(--font)}
+html[data-theme] .visual-module-7 .mock-dots i{border:0;background:var(--accent-line);border-radius:50%}
+html[data-theme] .visual-module-7 .mock-heading{font:700 25px/1.5 var(--font);text-decoration:none}
+html[data-theme] .visual-module-7 :is(.mock-button,.demo-button){border:1px solid var(--accent);border-radius:8px;background:var(--soft);font:600 14px/1.7 var(--font)}
+html[data-theme] .visual-module-7 .mock-footnote{font-size:12px;line-height:1.7}
+html[data-theme] .visual-module-7 .visual-chip{border-style:solid;border-radius:6px;font-size:12px}
+html[data-theme] .visual-module-7 .demo-hint{border-style:solid;border-radius:8px}
+html[data-theme] .visual-module-7 .demo-button:hover{background:var(--strong);color:var(--on-strong)}
+html[data-theme] .visual-module-7 .event-flow>li{border:1px solid var(--rule);border-radius:10px;padding:16px 12px;gap:10px}
+html[data-theme] .visual-module-7 .event-flow>li>span{font:600 14px/1 var(--font);background:var(--soft);color:var(--accent)}
+html[data-theme] .visual-module-7 .event-flow strong{font-size:14px;line-height:1.7}
+html[data-theme] .visual-module-7 .local-boundary{border:1px solid var(--accent-border);border-radius:12px;background:var(--soft)}
+html[data-theme] .visual-module-7 .state-visible{border-color:var(--teal-border);background:var(--surface)}
+html[data-theme] .visual-module-7 :is(.state-change,.exchange-route){font-size:13px;line-height:1.75}
+html[data-theme] .visual-module-7 :is(.flow-arrow,.exchange-route b){font:400 28px/1 var(--font);color:var(--accent)}
+html[data-theme] .visual-module-7 .server-endpoint .endpoint-icon{background:var(--teal-soft);color:var(--teal)}
+html[data-theme] .visual-module-7 .saving-state:last-child{background:var(--surface);border-color:var(--ochre-border)}
+html[data-theme] .visual-module-7 .saving-state:last-child .endpoint-icon{background:var(--ochre-soft);color:var(--ochre)}
+html[data-theme] .visual-module-7 .saving-inference>span{border:1px solid var(--ochre);border-radius:50%;font:600 28px/1 var(--font)}
+html[data-theme] .visual-module-7 :is(.saving-conclusion,.exchange-result){border:1px solid var(--accent-border);border-radius:10px;font-size:14px;line-height:1.75}
+@container(max-width:560px){
+ html[data-theme] .visual-module-7 :is(.role-cards,.local-flow,.exchange-picture,.event-flow,.saving-picture){grid-template-columns:minmax(0,1fr)}
+ html[data-theme] .visual-module-7 .roles-branches{display:none}
+ html[data-theme] .visual-module-7 .state-change .flow-arrow{transform:rotate(90deg)}
+ html[data-theme] .visual-module-7 .exchange-routes{grid-column:1;grid-row:2;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ html[data-theme] .visual-module-7 .server-endpoint{grid-column:1;grid-row:3}
+ html[data-theme] .visual-module-7 .exchange-route{flex-direction:column;justify-content:center;text-align:center;padding:12px 8px}
+ html[data-theme] .visual-module-7 .exchange-route>b{transform:rotate(90deg)}
+ html[data-theme] .visual-module-7 .event-flow>li+li::before{content:"↓";left:22px;top:-16px;width:14px;height:14px;font-size:14px}
+ html[data-theme] .visual-module-7 .event-flow>li{display:grid;grid-template-columns:28px minmax(0,1fr);grid-template-rows:auto auto;text-align:left;align-items:center}
+ html[data-theme] .visual-module-7 .event-flow>li>span{grid-column:1;grid-row:1/span 2}
+ html[data-theme] .visual-module-7 .event-flow>li>strong{grid-column:2;grid-row:1}
+ html[data-theme] .visual-module-7 .event-flow>li>small{grid-column:2;grid-row:2}
+ html[data-theme] .visual-module-7 .demo-toolbar{flex-direction:column;align-items:flex-start}
+}
+@container(max-width:480px){html[data-theme] .visual-module-7 .appearance-picture{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-7 .parts-tree{margin-left:0;padding-left:14px}html[data-theme] .visual-module-7 .parts-tree>li{flex-direction:column;align-items:flex-start}html[data-theme] .visual-module-7 .parts-tree>li::before{left:-15px;width:14px}}

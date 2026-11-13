@@ -1,0 +1,47 @@
+/* Модуль 5: области visual-module-5 и m5-source. Прежние уроки не меняются. */
+html[data-theme] .visual-module-5 .m5-two,html[data-theme] .visual-module-5 .m5-three{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+html[data-theme] .visual-module-5 .m5-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+html[data-theme] .visual-module-5 .m5-card{--m5-color:var(--accent);display:flex;flex-direction:column;gap:14px;align-items:stretch;min-width:0;padding:20px 14px;border:1px solid var(--rule);border-top:3px solid var(--m5-color);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-5 .m5-teal{--m5-color:var(--teal)}
+html[data-theme] .visual-module-5 .m5-ochre{--m5-color:var(--ochre)}
+html[data-theme] .visual-module-5 .m5-label{display:block;font:700 17px/1.45 var(--font);color:var(--m5-color,var(--ink));overflow-wrap:anywhere}
+html[data-theme] .visual-module-5 .m5-small{display:block;font:400 12px/1.65 var(--font);color:var(--muted)}
+html[data-theme] .visual-module-5 .m5-card p,html[data-theme] .visual-module-5 .m5-layer p{font:400 14px/1.75 var(--font);color:var(--text)}
+html[data-theme] .visual-module-5 .m5-copy{padding:14px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-alt);font:500 15px/1.75 var(--font);color:var(--ink);overflow-wrap:anywhere}
+html[data-theme] .visual-module-5 .m5-arrow{align-self:center;justify-self:center;font:400 24px/1 var(--font);color:var(--accent)}
+html[data-theme] .visual-module-5 .m5-flow{display:grid;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr);gap:12px}
+html[data-theme] .visual-module-5 .m5-layer{padding:20px 18px;border:1px solid var(--rule);border-left:3px solid var(--m5-color,var(--accent));border-radius:10px;background:var(--surface)}
+html[data-theme] .visual-module-5 .m5-layer p{margin-top:12px}
+html[data-theme] .visual-module-5 .m5-relation{padding:18px 8px;font:500 14px/1.7 var(--font);text-align:center;color:var(--teal)}
+html[data-theme] .visual-module-5 .m5-hardware{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border:0;border-radius:8px;background:#fff;margin:0}
+html[data-theme] .visual-module-5 .m5-comparison{display:grid;gap:16px;margin-top:22px}
+html[data-theme] .visual-module-5 .m5-comparison+.m5-comparison{border-top:1px solid var(--rule);padding-top:22px}
+html[data-theme] .visual-module-5 .m5-copy+.visual-intro{margin-top:18px}
+@container(min-width:561px){html[data-theme] .visual-module-5[data-visual="m5-resource-roles"] .m5-label{min-height:2.9em}}
+@container(max-width:560px){html[data-theme] .visual-module-5 .m5-three,html[data-theme] .visual-module-5 .m5-flow{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-5 .m5-flow>.m5-arrow{transform:rotate(90deg)}}
+@container(max-width:480px){html[data-theme] .visual-module-5 .m5-two{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-5 .m5-card{padding:18px 12px}}
+html[data-theme] .diagram-frame.m5-source{background:var(--surface-alt);border:1px solid var(--rule);border-radius:10px;clip-path:none;box-shadow:none}
+html[data-theme] .diagram-frame.m5-source::before{display:none}
+html[data-theme] .prose .diagram-frame.m5-source pre{background:var(--surface-alt);color:var(--ink);border:0;clip-path:none;box-shadow:none}
+html[data-theme] .visual-module-5 .m5-route{display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr) 20px minmax(0,1fr) 20px minmax(0,1fr);gap:6px}
+html[data-theme] .visual-module-5 .m5-route>.m5-card{padding:16px 10px}
+html[data-theme] .visual-module-5 .m5-route .m5-label{font-size:15px}
+html[data-theme] .visual-module-5 .m5-route p{font-size:13px}
+html[data-theme] .visual-module-5 .m5-route>.m5-arrow{font-size:20px}
+@container(max-width:560px){html[data-theme] .visual-module-5 .m5-route{grid-template-columns:minmax(0,1fr);gap:10px}html[data-theme] .visual-module-5 .m5-route>.m5-arrow{transform:rotate(90deg)}}
+html[data-theme] .visual-module-5 .m5-spaced{margin-top:20px}
+@container(min-width:561px){
+ html[data-theme] .visual-module-5[data-visual="m5-program-process-states"] .m5-three{grid-template-rows:repeat(9,auto)}
+ html[data-theme] .visual-module-5[data-visual="m5-program-process-states"] .m5-three>.m5-card{grid-row:span 9;display:grid;grid-template-rows:subgrid}
+}
+html[data-theme] .visual-module-5 code.m5-code{display:block;padding:14px 12px;border:1px solid var(--accent-border);border-radius:8px;background:var(--soft);font:500 16px/1.85 Consolas,monospace;color:var(--accent);white-space:pre-wrap;overflow-wrap:anywhere}
+html[data-theme] .visual-module-5 .m5-explain{display:grid;gap:0;margin:20px 0}
+html[data-theme] .visual-module-5 .m5-explain>div{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:14px 12px;border-bottom:1px solid var(--rule);background:var(--surface)}
+html[data-theme] .visual-module-5 .m5-explain dt{font:600 16px/1.7 Consolas,monospace;color:var(--accent);margin:0}
+html[data-theme] .visual-module-5 .m5-explain dd{font:400 14px/1.75 var(--font);color:var(--text);margin:0}
+@container(max-width:480px){html[data-theme] .visual-module-5 .m5-explain>div{grid-template-columns:minmax(0,1fr);gap:8px}}
+html[data-theme] .visual-module-5 .m5-explain dt{overflow-wrap:anywhere}
+html[data-theme] .visual-module-5 code.m5-command{display:flex;flex-wrap:wrap;column-gap:.65em}
+html[data-theme] .visual-module-5 .m5-command>span{white-space:nowrap}
+html[data-theme] .visual-module-5 .m5-session{display:grid;gap:18px}
+html[data-theme] .visual-module-5 .m5-session>div{display:grid;gap:10px}

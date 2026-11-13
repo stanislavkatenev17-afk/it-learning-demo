@@ -1,0 +1,61 @@
+/* Только иллюстрации модуля 4. Общая оболочка visual-modern переиспользуется. */
+html[data-theme] .visual-module-4 .m4-two,html[data-theme] .visual-module-4 .m4-three{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+html[data-theme] .visual-module-4 .m4-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+html[data-theme] .visual-module-4 .m4-card{--m4-color:var(--accent);display:flex;flex-direction:column;gap:14px;align-items:stretch;min-width:0;padding:20px 16px;border:1px solid var(--rule);border-top:3px solid var(--m4-color);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-4 .m4-teal{--m4-color:var(--teal)}
+html[data-theme] .visual-module-4 .m4-ochre{--m4-color:var(--ochre)}
+html[data-theme] .visual-module-4 .m4-label{display:block;font:700 17px/1.45 var(--font);color:var(--m4-color,var(--ink));overflow-wrap:anywhere}
+html[data-theme] .visual-module-4 .m4-small{display:block;font:400 12px/1.65 var(--font);color:var(--muted)}
+html[data-theme] .visual-module-4 .m4-card p{font:400 14px/1.75 var(--font);color:var(--text)}
+html[data-theme] .visual-module-4 .m4-copy{padding:14px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-alt);font:500 16px/1.7 var(--font);color:var(--ink);overflow-wrap:anywhere}
+html[data-theme] .visual-module-4 .m4-arrow{align-self:center;justify-self:center;font:400 24px/1 var(--font);color:var(--accent)}
+html[data-theme] .visual-module-4 .m4-flow{display:grid;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr);gap:12px}
+html[data-theme] .visual-module-4 .m4-comparison{display:grid;gap:16px;margin-top:22px}
+html[data-theme] .visual-module-4 .m4-comparison+.m4-comparison{padding-top:22px;border-top:1px solid var(--rule)}
+html[data-theme] .visual-module-4 .m4-bit-group{display:grid;gap:10px;max-width:100%}
+html[data-theme] .visual-module-4 .m4-bits{display:grid;grid-template-columns:repeat(var(--bit-count),minmax(0,1fr));gap:4px;max-width:340px}
+html[data-theme] .visual-module-4 .m4-bit{display:grid;place-items:center;min-width:0;min-height:36px;border:1px solid var(--accent-border);border-radius:5px;background:var(--soft);font:600 19px/1.6 var(--mono,monospace);color:var(--accent)}
+html[data-theme] .visual-module-4 .m4-changed{border:2px solid var(--teal);background:var(--teal-soft);color:var(--teal)}
+html[data-theme] .visual-module-4 .m4-rule{padding:20px;border:1px solid var(--rule);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-4 .m4-rule dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;margin:16px 0 0}
+html[data-theme] .visual-module-4 .m4-rule dl div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--rule);padding:6px 0}
+html[data-theme] .visual-module-4 .m4-rule dt,html[data-theme] .visual-module-4 .m4-rule dd{font:500 15px/1.6 var(--font);margin:0;color:var(--ink)}
+@container(max-width:560px){html[data-theme] .visual-module-4 .m4-three,html[data-theme] .visual-module-4 .m4-flow{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-4 .m4-flow>.m4-arrow{transform:rotate(90deg)}}
+@container(max-width:480px){html[data-theme] .visual-module-4 .m4-two,html[data-theme] .visual-module-4 .m4-rule dl{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-module-4 .m4-card{padding:18px 12px}}
+html[data-theme] .visual-module-4 .m4-copy+.m4-two,html[data-theme] .visual-module-4 .m4-label+.m4-three,html[data-theme] .visual-module-4 .m4-three+.m4-copy{margin-top:16px}
+html[data-theme] .visual-module-4 .m4-badges{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+html[data-theme] .visual-module-4 .m4-badges span{padding:10px 2px;border:1px solid var(--rule);border-radius:6px;background:var(--teal-soft);color:var(--teal);font:500 12px/1.6 var(--font);text-align:center}
+html[data-theme] .visual-module-4 .m4-measures{display:grid;gap:22px;margin-top:22px;padding:20px 16px;border:1px solid var(--rule);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-4 .m4-measure{--m4-color:var(--accent);display:grid;gap:10px}
+html[data-theme] .visual-module-4 .m4-measure.m4-teal{--m4-color:var(--teal)}
+html[data-theme] .visual-module-4 .m4-measure.m4-ochre{--m4-color:var(--ochre)}
+html[data-theme] .visual-module-4 .m4-track{height:20px;border:1px solid var(--rule);border-radius:4px;background:var(--surface-alt);overflow:hidden}
+html[data-theme] .visual-module-4 .m4-track>span{display:block;height:100%;border-radius:3px;background:var(--m4-color)}
+html[data-theme] .visual-module-4 .m4-amount{font:600 20px/1.5 var(--font);color:var(--ink)}
+html[data-theme] .visual-module-4 .m4-copy+.visual-intro{margin-top:18px}
+html[data-theme] .visual-module-4 .m4-text-row{display:flex;gap:12px;flex-wrap:wrap}
+html[data-theme] .visual-module-4 .m4-character{display:grid;gap:10px;min-width:0;flex:1}
+html[data-theme] .visual-module-4 .m4-symbol{font:600 34px/1.5 var(--font);color:var(--ink);text-align:center}
+html[data-theme] .visual-module-4 .m4-byte-chips{display:grid;gap:6px}
+html[data-theme] .visual-module-4 .m4-byte-chips span{padding:8px 4px;border:1px solid var(--rule);border-radius:5px;background:var(--surface-alt);font:500 13px/1.6 var(--font);text-align:center;color:var(--text)}
+html[data-theme] .visual-module-4 .m4-pixels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:var(--pixel-width);max-width:100%;align-self:center;border:1px solid var(--ink);background:var(--ink);gap:1px}
+html[data-theme] .visual-module-4 .m4-pixel{display:grid;place-items:center;aspect-ratio:1;min-width:0;font:500 12px/1 var(--font)}
+html[data-theme] .visual-module-4 .m4-pixel.is-white{background:#fff;color:var(--ink)}
+html[data-theme] .visual-module-4 .m4-pixel.is-black{background:var(--ink);color:#fff}
+html[data-theme] .visual-module-4 .m4-signal{padding:18px 12px;border:1px solid var(--rule);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-module-4 .m4-sample-plot{display:block;width:100%;height:auto;max-width:580px;margin:14px auto;fill:var(--teal);stroke:var(--teal);stroke-width:2}
+html[data-theme] .visual-module-4 .m4-axis{fill:none;stroke:var(--ink);stroke-width:1.5}
+html[data-theme] .visual-module-4 .m4-guide{fill:none;stroke:var(--accent-border);stroke-dasharray:4 4}
+html[data-theme] .visual-module-4 .m4-samples{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:14px 0;max-width:580px;margin-inline:auto}
+html[data-theme] .visual-module-4 .m4-samples div{display:grid;gap:8px;text-align:center}
+html[data-theme] .visual-module-4 .m4-samples strong{font:600 24px/1.4 var(--font);color:var(--ink)}
+html[data-theme] .visual-module-4 .m4-conditions{padding-left:20px;margin:14px 0 0;font:400 14px/1.75 var(--font);color:var(--text)}
+html[data-theme] .visual-module-4 .m4-conditions li+li{margin-top:8px}
+html[data-theme] .visual-module-4 .m4-frames{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0}
+html[data-theme] .visual-module-4 .m4-frame{padding:8px 4px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);text-align:center}
+html[data-theme] .visual-module-4 .m4-frame svg{display:block;width:100%;height:auto;margin-bottom:8px;fill:var(--teal);stroke:var(--teal);stroke-width:2}
+html[data-theme] .visual-module-4 .m4-frame svg path{fill:none;stroke:var(--rule)}
+/* Исходные текстовые схемы модуля 4, в том числе в заданиях: текст сохранён. */
+html[data-theme] .diagram-frame.m4-source{background:var(--surface-alt);border:1px solid var(--rule);border-radius:10px;clip-path:none;box-shadow:none}
+html[data-theme] .diagram-frame.m4-source::before{display:none}
+html[data-theme] .prose .diagram-frame.m4-source pre{background:var(--surface-alt);color:var(--ink);border:0;clip-path:none;box-shadow:none}
