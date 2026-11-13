@@ -1,0 +1,202 @@
+/* Светлая палитра поверх общей геометрии workspace.css. */
+:root[data-theme]{
+  --paper:#ffffff;--surface:#ffffff;--surface-alt:#f4f7fb;--sidebar:#f0f4f9;
+  --ink:#10243c;--text:#213a54;--muted:#3d536d;
+  --accent:#194875;--soft:#e9f0fa;--accent-border:#a8bfd9;--accent-line:#7495ba;
+  --title-start:#254f78;--title-end:#245c61;--title-rule:#6792ad;
+  --section-start:#315c7c;--section-end:#2b6266;
+  --heading-ink:#f6faff;--heading-accent:#d5e9ff;--heading-secondary:#d7ebf5;
+  --figure-start:#f5f6f8;--figure-end:#f0f2f5;--figure-border:#c6d0dc;--figure-dot:rgba(71,80,91,.025);
+  --figure-glow:rgba(255,255,255,.96);--figure-inner-edge:rgba(255,255,255,.95);--figure-shadow:rgba(105,141,182,.1);
+  --table-row:#f7f9fc;--table-row-alt:#edf2f7;--table-hover:#e3edf7;--table-border:#b8c7d9;--table-rule:#d4dfeb;
+  --rule:#c9d5e3;--rule-soft:#dce5ef;--focus:#3476bc;
+  --strong:#183b65;--strong-hover:#244e7c;--strong-border:#587ca6;
+  --on-strong:#f4f8ff;--on-strong-muted:#c2d5ed;
+  --teal:#2d6f75;--teal-soft:#e8f4f3;--teal-border:#9cbfbd;
+  --ochre:#8a632e;--ochre-soft:#f7f0e4;--ochre-border:#ccb58f;
+  --success:#28704f;--error:#a34542;--error-border:#bd7d7a;
+  --code-bg:#142238;--code-border:#39516e;--code-text:#dce9fa;--code-muted:#9ab1cc;
+  --header-bg:#ffffffed;--shadow:#122e500d;--edge:#e6edf6;--overlay:#08152588;
+  --hero-muted:#355b7e;--decor:#557ca8;--grid-on-strong:#ffffff08;
+  --ambient-base:#edf3fa;--ambient-blue:rgba(53,118,194,.18);--ambient-teal:rgba(43,151,145,.14);
+  --ambient-symbols:url("background-symbols-light.svg");--ambient-grain:url("background-grain-light.svg");
+  color-scheme:light;
+}
+html[data-theme] body{background:var(--paper);color:var(--text)}
+/* Разбросанные символы IT и мелкая зернистость поверх мягкого цветного напыления. */
+html[data-theme] body{
+  background-color:var(--ambient-base);
+  background-image:var(--ambient-symbols),var(--ambient-grain),radial-gradient(ellipse 1100px 850px at 100% 160px,var(--ambient-blue),transparent),radial-gradient(ellipse 1050px 950px at 0 760px,var(--ambient-teal),transparent);
+  background-size:1000px 780px,180px 180px,100% 100%,100% 100%;
+  background-repeat:repeat,repeat,no-repeat,no-repeat;
+}
+html[data-theme] h1,html[data-theme] h2,html[data-theme] h3{color:var(--ink)}
+html[data-theme] .top{background:var(--header-bg);border-color:var(--rule)}
+html[data-theme] .brand{color:var(--ink)}
+html[data-theme] .brand-mark{background:var(--strong);color:var(--on-strong)}
+html[data-theme] .brand-mark>span{color:var(--on-strong-muted)}
+html[data-theme] .brand small,html[data-theme] .global-nav a{color:var(--muted)}
+html[data-theme] .global-nav a:hover,html[data-theme] .global-nav a[aria-current]{color:var(--ink);box-shadow:0 2px var(--accent)}
+html[data-theme] .global-nav a:last-child{color:var(--ink);border-color:var(--rule);box-shadow:none}
+html[data-theme] .global-nav a:last-child span{color:var(--muted)}
+html[data-theme] .menu{background:var(--surface);border-color:var(--rule);color:var(--ink)}
+html[data-theme] .skip{background:var(--strong);color:var(--on-strong)}
+html[data-theme] .sidebar{background:var(--sidebar);border-color:var(--rule)}
+html[data-theme] .sidebar-course{color:var(--ink)}
+html[data-theme] .sidebar-course small,html[data-theme] .sidebar-label,html[data-theme] .sidebar-note{color:var(--muted)}
+html[data-theme] .sidebar-note,html[data-theme] .mobile-global{border-color:var(--rule)}
+html[data-theme] .mobile-global a{color:var(--text)}
+html[data-theme] .course-symbol{background:var(--surface);color:var(--accent);border-color:var(--accent-border)}
+html[data-theme] .nav-module>a{background:var(--surface);color:var(--text);border-color:var(--rule);box-shadow:0 2px 0 var(--edge)}
+html[data-theme] .nav-module>a:hover{background:var(--soft);border-color:var(--accent-line);color:var(--ink)}
+html[data-theme] .nav-module>a[aria-current]{background:var(--soft);color:var(--accent);border-color:var(--accent-line);box-shadow:inset 3px 0 var(--accent-line),0 2px 0 var(--edge)}
+html[data-theme] .nav-number{background:var(--soft);color:var(--accent);border-color:var(--accent-border)}
+html[data-theme] .nav-module>a[aria-current] .nav-number{background:var(--strong);border-color:var(--strong);color:var(--on-strong)}
+html[data-theme] .nav-lessons{border-left-color:var(--accent-line)}
+html[data-theme] .nav-lessons a{background:var(--surface);color:var(--text);border-color:var(--rule);box-shadow:0 2px 0 var(--edge)}
+html[data-theme] .nav-lessons a:hover{background:var(--soft);color:var(--accent);border-color:var(--accent-line)}
+html[data-theme] .nav-lessons a[aria-current="page"]{background:var(--strong);border-color:var(--strong);border-left-color:var(--accent-line);color:var(--on-strong);box-shadow:0 4px 10px var(--shadow)}
+html[data-theme] .nav-lessons a[aria-current="page"]:hover{background:var(--strong-hover)}
+html[data-theme] .nav-lessons a[aria-current="page"] .lesson-dot{background:var(--on-strong-muted);border-color:var(--on-strong-muted)}
+html[data-theme] .current-lesson-label{color:var(--on-strong-muted)}
+html[data-theme] .lesson-dot{border-color:var(--accent-line)}
+html[data-theme] .quiz-dot{color:var(--accent)}
+html[data-theme] .outline-inner nav,html[data-theme] .outline-completion{border-color:var(--rule)}
+html[data-theme] .outline-inner nav a,html[data-theme] .mobile-outline nav a{background:var(--surface);border-color:var(--rule);color:var(--text)}
+html[data-theme] .outline-inner nav a>span,html[data-theme] .outline-completion{color:var(--muted)}
+html[data-theme] .outline-inner nav a:hover{background:var(--soft);border-color:var(--accent-line);color:var(--accent)}
+html[data-theme] .outline-inner nav a.active{background:var(--soft);border-color:var(--accent-line);color:var(--accent)}
+html[data-theme] .mobile-outline{background:var(--surface);border-color:var(--rule)}
+html[data-theme] .mobile-outline summary,html[data-theme] .mobile-outline summary>span{color:var(--muted)}
+
+html[data-theme] .lesson-header h1{color:var(--heading-ink);background:linear-gradient(115deg,var(--title-start),var(--title-end));border-color:var(--title-rule);box-shadow:0 3px 0 var(--edge)}
+html[data-theme] .lesson-header h1 .course-term{color:var(--heading-accent)}
+html[data-theme] .lesson-header h1::before,html[data-theme] .lesson-header h1::after{border-color:var(--title-rule)}
+html[data-theme] .home-hero h1>span{color:var(--heading-secondary)}
+html[data-theme] .lesson-header,html[data-theme] .lesson-topline~.lesson-header{border-color:var(--rule)}
+html[data-theme] .lesson-label,html[data-theme] .home-hero .lesson-label,html[data-theme] .section-intro .lesson-label,html[data-theme] .how-section .lesson-label{color:var(--accent)}
+html[data-theme] .lead,html[data-theme] .hero-note,html[data-theme] .lesson-topline a,html[data-theme] .course-stats{color:var(--muted)}
+html[data-theme] .lesson-topline a span{background:var(--soft);color:var(--accent)}
+html[data-theme] .course-stats{border-color:var(--rule)}
+html[data-theme] .course-stats strong{color:var(--ink)}
+html[data-theme] .status-dot{background:var(--accent-line)}
+html[data-theme] .button{background:var(--strong);border-color:var(--strong);color:var(--on-strong);box-shadow:0 2px 3px var(--shadow)}
+html[data-theme] .button:hover{background:var(--strong-hover);border-color:var(--strong-hover)}
+html[data-theme] .button.secondary{background:var(--surface);border-color:var(--rule);color:var(--ink)}
+html[data-theme] .button.secondary:hover{background:var(--soft);border-color:var(--accent-border)}
+html[data-theme] .quiet-link{color:var(--muted)}
+html[data-theme] .quiet-link:hover{color:var(--accent)}
+html[data-theme] .prose strong{color:var(--ink)}
+html[data-theme] .course-term,html[data-theme] .prose .course-term,html[data-theme] .quiz-card .course-term,html[data-theme] .lesson-header .course-term{color:var(--accent);font-weight:700}
+html[data-theme] .prose{font-weight:400}
+html[data-theme] .prose h2{color:var(--heading-ink);background:linear-gradient(115deg,var(--section-start),var(--section-end));border-color:var(--title-rule);border-left-color:var(--heading-accent);box-shadow:0 2px 0 var(--edge)}
+html[data-theme] .prose>h3,html[data-theme] .answer h3{color:var(--heading-ink);padding:10px 14px;background:linear-gradient(115deg,var(--section-start),var(--section-end));border-color:var(--title-rule);border-radius:6px}
+html[data-theme] .prose h2 .course-term,html[data-theme] .prose>h3 .course-term,html[data-theme] .answer h3 .course-term{color:var(--heading-accent)}
+html[data-theme] .prose h2 .section-number{color:var(--heading-secondary)}
+html[data-theme] .prose h3,html[data-theme] .prose hr{border-color:var(--rule)}
+html[data-theme] .section-number,html[data-theme] .prose li::marker{color:var(--muted)}
+html[data-theme] .prose p.definition{color:var(--text);border-left-color:var(--accent-line)}
+html[data-theme] .prose .self-check{color:var(--text);background:var(--soft);border-color:var(--accent-border)}
+html[data-theme] .prose .self-check strong{color:var(--accent)}
+html[data-theme] .answer{background:var(--surface);border-color:var(--rule)}
+html[data-theme] .answer summary,html[data-theme] .answer summary::after{color:var(--accent)}
+html[data-theme] .answer summary:hover{background:var(--surface-alt)}
+html[data-theme] .answer[open] summary{color:var(--accent);border-color:var(--rule-soft)}
+html[data-theme] p code,html[data-theme] li code{background:var(--soft);border-color:var(--accent-border);color:var(--accent)}
+html[data-theme] .diagram-frame{background:var(--code-bg);border-color:var(--code-border)}
+html[data-theme] .diagram-frame::before{background:radial-gradient(circle at 17px 15px,var(--code-muted) 2.5px,transparent 3px),radial-gradient(circle at 28px 15px,var(--strong-border) 2.5px,transparent 3px),radial-gradient(circle at 39px 15px,var(--strong-border) 2.5px,transparent 3px);border-color:var(--code-border)}
+html[data-theme] .prose pre{background:var(--code-bg);color:var(--code-text)}
+html[data-theme] .prose blockquote{background:var(--surface-alt);color:var(--text);border-color:var(--accent-line)}
+/* Учебные таблицы: контрастная шапка, спокойные строки и единая карточка. */
+html[data-theme] .table-scroll{background:var(--table-row);border:1px solid var(--table-border);border-radius:12px;box-shadow:inset 0 1px 0 var(--figure-inner-edge),0 5px 22px var(--figure-shadow);scrollbar-width:thin;scrollbar-color:var(--accent-border) var(--table-row)}
+html[data-theme] .table-scroll table{font-size:14px;line-height:1.8;color:var(--text)}
+html[data-theme] .table-scroll thead{background:linear-gradient(115deg,var(--title-start),var(--title-end))}
+html[data-theme] .table-scroll th{padding:16px 18px;background:transparent;color:var(--heading-ink);font-weight:700;vertical-align:middle;border-bottom:1px solid var(--table-border)}
+html[data-theme] .table-scroll th+th{border-left:1px solid rgba(255,255,255,.16)}
+html[data-theme] .table-scroll thead .course-term,html[data-theme] .table-scroll thead strong{color:var(--heading-accent)}
+html[data-theme] .table-scroll td{padding:16px 18px;border-bottom:1px solid var(--table-rule)}
+html[data-theme] .table-scroll td+td{border-left:1px solid var(--table-rule)}
+html[data-theme] .table-scroll tbody tr{background:var(--table-row)}
+html[data-theme] .table-scroll tbody tr:nth-child(even){background:var(--table-row-alt)}
+html[data-theme] .table-scroll tbody td:first-child{color:var(--ink);font-weight:600}
+html[data-theme] .table-scroll tbody tr:last-child td{border-bottom:0}
+@media(hover:hover){html[data-theme] .table-scroll tbody tr:hover{background:var(--table-hover)}}
+
+html[data-theme] .module-card{--module-accent:var(--accent);--module-soft:var(--soft);--module-border:var(--accent-border);background:var(--surface);box-shadow:0 7px 22px var(--shadow)}
+html[data-theme] .module-card[data-tone="1"]{--module-accent:var(--teal);--module-soft:var(--teal-soft);--module-border:var(--teal-border)}
+html[data-theme] .module-card[data-tone="2"]{--module-accent:var(--ochre);--module-soft:var(--ochre-soft);--module-border:var(--ochre-border)}
+html[data-theme] .module-card-top{background:linear-gradient(110deg,var(--module-soft),var(--surface));border-color:var(--module-border)}
+html[data-theme] .module-index{background:var(--surface);color:var(--module-accent);border-color:var(--module-border);box-shadow:0 3px 0 var(--module-soft)}
+html[data-theme] .module-card h2 a{color:var(--ink)}
+html[data-theme] .module-card h2 a:hover{color:var(--module-accent)}
+html[data-theme] .module-card-top p{color:var(--muted)}
+html[data-theme] .module-emblem{background:var(--module-soft);color:var(--module-accent);border-color:var(--module-border);box-shadow:none}
+html[data-theme] .lesson-list li,html[data-theme] .lesson-list li:last-child{background:var(--surface);border-color:var(--module-border);box-shadow:0 3px 0 var(--module-soft)}
+html[data-theme] .lesson-list li:hover{background:var(--module-soft);border-color:var(--module-accent)}
+html[data-theme] .lesson-list a{color:var(--ink)}
+html[data-theme] .lesson-list a:hover{color:var(--module-accent)}
+html[data-theme] .row-id{background:var(--module-soft);border-color:var(--module-border);color:var(--module-accent)}
+html[data-theme] .row-status{background:var(--module-soft);border-color:var(--module-border);color:var(--text)}
+html[data-theme] .row-status::before{background:var(--module-accent)}
+html[data-theme] .text-action,html[data-theme] .text-action:hover{background:var(--module-soft);color:var(--module-accent);border-color:var(--module-border)}
+
+html[data-theme] .completion,html[data-theme] .result-box{background:var(--surface-alt);border-color:var(--accent-border)}
+html[data-theme] .completion h2,html[data-theme] .result-box h2{border-color:var(--rule)}
+html[data-theme] .checks label,html[data-theme] .options label{background:var(--surface);border-color:var(--rule);color:var(--text)}
+html[data-theme] .checks label:has(input:checked),html[data-theme] .options label:has(input:checked){background:var(--soft);border-color:var(--accent-line)}
+html[data-theme] .options label:hover{background:var(--surface-alt);border-color:var(--accent-line)}
+html[data-theme] .checks input,html[data-theme] .options input,html[data-theme] progress{accent-color:var(--accent)}
+html[data-theme] #completion-status{color:var(--accent)}
+html[data-theme] .notice,html[data-theme] .session-note{background:var(--surface-alt);border-color:var(--rule);color:var(--muted)}
+html[data-theme] .completion .session-note{background:none;border-color:var(--rule)}
+html[data-theme] .muted,html[data-theme] .lesson-footer p+p,html[data-theme] .site-footer,html[data-theme] .site-footer>span{color:var(--muted)}
+html[data-theme] .lesson-footer,html[data-theme] .site-footer,html[data-theme] .explanation,html[data-theme] .term,html[data-theme] .progress-row{border-color:var(--rule)}
+html[data-theme] .lesson-pagination a{color:var(--accent)}
+html[data-theme] .search{background:var(--surface);color:var(--ink);border-color:var(--rule)}
+html[data-theme] .search::placeholder{color:var(--muted)}
+html[data-theme] .term h2{color:var(--accent)}
+html[data-theme] .term-variant{border-color:var(--accent-border)}
+html[data-theme] .quiz-card{background:var(--surface);border-color:var(--rule)}
+html[data-theme] .quiz-card legend{color:var(--accent)}
+html[data-theme] .correct{color:var(--success)}
+html[data-theme] .incorrect,html[data-theme] #quiz-error{color:var(--error)}
+html[data-theme] .unanswered{border-color:var(--error-border)}
+html[data-theme] progress::-webkit-progress-bar{background:var(--soft)}
+html[data-theme] progress::-webkit-progress-value{background:var(--accent-line)}
+html[data-theme] dialog{background:var(--surface);color:var(--text);border-color:var(--rule);box-shadow:0 24px 90px var(--shadow)}
+html[data-theme] dialog::backdrop{background:var(--overlay)}
+
+html[data-theme] .topic-card{background:var(--soft);border-color:var(--accent-border);border-top-color:var(--accent-line)}
+html[data-theme] .topic-card:nth-child(2){background:var(--teal-soft);border-color:var(--teal-border);border-top-color:var(--teal)}
+html[data-theme] .topic-card:nth-child(3){background:var(--ochre-soft);border-color:var(--ochre-border);border-top-color:var(--ochre)}
+html[data-theme] .topic-card:hover{border-color:var(--accent-line)}
+html[data-theme] .topic-number,html[data-theme] .topic-number>span{color:var(--accent)}
+html[data-theme] .topic-card p,html[data-theme] .steps p{color:var(--muted)}
+html[data-theme] .steps strong{color:var(--ink)}
+html[data-theme] .steps li,html[data-theme] .how-section{border-color:var(--rule)}
+html[data-theme] .steps li::marker{color:var(--accent)}
+html[data-theme] .section-intro h2,html[data-theme] .how-section h2{border-color:var(--accent-line)}
+html[data-theme] .start-card{background:var(--code-bg);color:var(--code-text);border-color:var(--code-border);box-shadow:0 18px 50px var(--shadow)}
+html[data-theme] .start-card::before{background-image:linear-gradient(var(--grid-on-strong) 1px,transparent 1px),linear-gradient(90deg,var(--grid-on-strong) 1px,transparent 1px)}
+html[data-theme] .start-card-top,html[data-theme] .start-kicker,html[data-theme] .start-card li a,html[data-theme] .start-card li a>span:first-child,html[data-theme] .start-card li a>span:last-child,html[data-theme] .start-link{color:var(--on-strong-muted)}
+html[data-theme] .start-card h2,html[data-theme] .start-card li a:hover{color:var(--on-strong)}
+html[data-theme] .start-card li,html[data-theme] .start-link{border-color:var(--code-border)}
+html[data-theme] .start-orbit>span{background:var(--strong);border-color:var(--strong-border);color:var(--on-strong);box-shadow:0 0 45px var(--shadow)}
+html[data-theme] .start-orbit i{border-color:var(--strong-border)}
+html[data-theme] .start-orbit b{background:var(--strong);border-color:var(--strong-border);color:var(--on-strong-muted)}
+html[data-theme] .tech-backdrop{color:var(--decor)}
+html[data-theme] .tech-backdrop g:first-child{stroke:var(--decor)}
+html[data-theme] .tech-backdrop g:first-child>rect{fill:var(--soft);stroke:var(--decor)}
+html[data-theme] .tech-backdrop g:first-child>rect:nth-of-type(2n){fill:var(--teal-soft);stroke:var(--teal)}
+html[data-theme] .tech-backdrop g:first-child>circle{fill:var(--paper)}
+html[data-theme] .tech-backdrop g:last-child{fill:var(--accent)}
+html[data-theme] .tech-ribbon::before{background:linear-gradient(90deg,var(--accent-border),var(--teal-border),var(--ochre-border))}
+html[data-theme] .tech-mark{background:var(--soft);border-color:var(--accent-border);color:var(--accent);box-shadow:0 3px 0 var(--edge)}
+html[data-theme] .tech-mark:nth-child(2){background:var(--teal-soft);border-color:var(--teal-border);color:var(--teal)}
+html[data-theme] .tech-mark:nth-child(3){background:var(--ochre-soft);border-color:var(--ochre-border);color:var(--ochre)}
+html[data-theme] .tech-mark:nth-child(4){background:var(--soft);border-color:var(--accent-border);color:var(--accent)}
+html[data-theme] .tech-bits{background:var(--paper);color:var(--accent)}
+html[data-theme] .tech-bits>span{color:var(--teal)}
+@media(max-width:1100px){.top{gap:18px}.global-nav{gap:18px}}
+@media(max-width:800px){.top{gap:10px}html[data-theme] .menu{margin-left:auto}}
+@media(max-width:400px){html[data-theme] body[data-page="lesson"] .lesson-header h1{padding:18px;font-size:30px}}

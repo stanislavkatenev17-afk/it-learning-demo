@@ -1,0 +1,95 @@
+/* Новый стандарт включается только явным visual-modern. Модуль 7 не затронут. */
+html[data-theme] .lesson-figure.visual-modern{container-type:inline-size;--sketch-font:var(--font);padding:26px 22px;border:1px solid var(--figure-border);border-radius:16px;background:var(--surface-alt);box-shadow:0 3px 12px var(--shadow);font:14px/1.65 var(--font);color:var(--text)}
+html[data-theme] .visual-modern .visual-title{font:700 22px/1.35 var(--font);letter-spacing:-.025em;text-decoration:none;color:var(--ink);width:auto}
+html[data-theme] .visual-modern .visual-kicker{color:var(--accent);font:600 11px/1.6 var(--font);letter-spacing:.09em}
+html[data-theme] .visual-modern figcaption{margin-bottom:24px}
+html[data-theme] .visual-modern .visual-note{font-size:13px;line-height:1.75;border-color:var(--rule);color:var(--muted)}
+html[data-theme] .visual-modern .intro-card{border:1px solid var(--rule);border-top:3px solid var(--intro-color);border-radius:12px;background:var(--surface);padding:20px 14px;gap:14px}
+html[data-theme] .visual-modern .intro-art{width:64px;height:64px;border-radius:14px;background:var(--intro-soft);color:var(--intro-color)}
+html[data-theme] .visual-modern svg.intro-drawing{width:48px;height:48px;stroke-width:2.7px}
+html[data-theme] .visual-modern .intro-label{font:700 17px/1.45 var(--font);color:var(--intro-color)}
+html[data-theme] .visual-modern .intro-message{font:400 14px/1.7 var(--font);color:var(--ink)}
+html[data-theme] .visual-modern .intro-result{border-top:1px solid var(--rule);font-size:13px}
+html[data-theme] .visual-modern .intro-arrow{font:400 28px/1.2 var(--font);color:var(--accent)}
+html[data-theme] .visual-modern .intro-takeaway{font-size:14px;line-height:1.7}
+html[data-theme] .visual-modern .intro-process{grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr) 26px minmax(0,1fr)}
+html[data-theme] .visual-modern .intro-process .intro-card{padding:18px 12px}
+html[data-theme] .visual-modern .intro-process .intro-arrow{font-size:24px}
+html[data-theme] .visual-modern .intro-transfer{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr)}
+@container(max-width:530px){
+ html[data-theme] .visual-modern .intro-forms,html[data-theme] .visual-modern .intro-transfer,html[data-theme] .visual-modern .intro-process{grid-template-columns:minmax(0,1fr);gap:16px}
+ html[data-theme] .visual-modern .intro-forms .intro-card{display:flex;text-align:center}
+ html[data-theme] .visual-modern .intro-arrow{transform:rotate(90deg)}
+}
+@media(max-width:760px){html[data-theme] .visual-modern .intro-transfer{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){html[data-theme] .visual-modern .intro-process{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:390px){html[data-theme] .lesson-figure.visual-modern{padding:22px 14px;border-radius:12px}html[data-theme] .visual-modern .visual-title{font-size:20px}}
+/* Реалистичный корпус + независимое условное окно с живым текстом. */
+html[data-theme] .visual-modern .conditional-label{font-size:12px;line-height:1.65;color:var(--muted);margin:0 0 18px}
+html[data-theme] .visual-modern .modern-device{position:relative;width:100%;max-width:580px;margin:0 auto;line-height:1;isolation:isolate}
+html[data-theme] .visual-modern img.monitor-body{display:block;width:100%;height:auto;border:0;border-radius:0;margin:0}
+html[data-theme] .visual-modern .monitor-screen{position:absolute;left:7.3%;top:5.4%;width:85.3%;height:70.7%;display:grid;place-items:center;background:#edf3f7;padding:2.5%;box-sizing:border-box;overflow:hidden}
+html[data-theme] .visual-modern .screen-window{display:flex;flex-direction:column;width:100%;height:100%;min-width:0;border:1px solid var(--accent-line);border-radius:4px;background:var(--surface);overflow:hidden;text-align:left;color:var(--ink)}
+html[data-theme] .visual-modern .screen-title{flex-shrink:0;background:var(--soft);border-bottom:1px solid var(--rule);padding:5px 8px;font:600 12px/1.2 var(--font)}
+html[data-theme] .visual-modern .screen-photo{min-height:0;flex:1;overflow:hidden;background:#e2ebf3}
+html[data-theme] .visual-modern .screen-photo img{display:block;width:100%;height:100%;object-fit:contain;border:0;border-radius:0;margin:0}
+html[data-theme] .visual-modern .screen-tools{display:flex;justify-content:space-between;flex-shrink:0;padding:2px 8px;font:400 12px/1.1 var(--font);background:var(--surface-alt);border-top:1px solid var(--rule)}
+html[data-theme] .visual-modern .screen-copy{display:grid;align-content:start;gap:1px;padding:4px 8px;font:400 12px/1.15 var(--font)}
+html[data-theme] .visual-modern .screen-copy b{font-weight:600;margin-bottom:3px}
+html[data-theme] .visual-modern .device-card{padding:18px 10px;gap:14px}
+html[data-theme] .visual-modern .device-card .intro-label{min-height:2.9em;display:grid;align-items:center}
+html[data-theme] .visual-modern .layer-device{position:relative;max-width:480px;margin:auto}
+html[data-theme] .visual-modern .layer-device .screen-title{font-size:14px;padding:8px 12px}
+html[data-theme] .visual-modern .layer-device .screen-copy{font-size:16px;gap:6px;padding:12px 16px}
+html[data-theme] .visual-modern .layer-badge{position:absolute;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font:700 14px/1 var(--font);border:2px solid white;box-shadow:0 1px 3px var(--shadow)}
+html[data-theme] .visual-modern .layer-one{left:0;top:20%}
+html[data-theme] .visual-modern .layer-two{right:6%;top:7%}
+html[data-theme] .visual-modern .layer-three{right:13%;top:45%;background:var(--teal)}
+html[data-theme] .visual-modern .layer-legend{list-style:none;counter-reset:layer;display:grid;gap:12px;padding:0;margin:18px 0 0}
+html[data-theme] .visual-modern .layer-legend li{counter-increment:layer;display:grid;grid-template-columns:28px minmax(0,1fr);gap:2px 10px;margin:0;padding:0;font-size:14px}
+html[data-theme] .visual-modern .layer-legend li::before{content:counter(layer);grid-row:1/3;display:grid;place-items:center;align-self:start;width:26px;height:26px;border-radius:50%;background:var(--accent);color:white;font-weight:700}
+html[data-theme] .visual-modern .layer-legend li:last-child::before{background:var(--teal)}
+html[data-theme] .visual-modern .layer-legend b{font-weight:600;color:var(--ink)}
+html[data-theme] .visual-modern .layer-legend span{grid-column:2;color:var(--muted);font-size:13px}
+@container(max-width:480px){html[data-theme] .visual-modern .intro-pair{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-modern .layer-device .screen-title{font-size:12px;padding:5px 8px}html[data-theme] .visual-modern .layer-device .screen-copy{font-size:12px;line-height:1.15;gap:1px;padding:4px 8px}}
+html[data-theme] .visual-modern .concept-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+html[data-theme] .visual-modern .concept-card{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:18px 14px;border:1px solid var(--rule);border-radius:12px;background:var(--surface);min-width:0}
+html[data-theme] .visual-modern .concept-icon{display:grid;place-items:center;flex-shrink:0;width:48px;height:48px;background:var(--soft);color:var(--accent);border-radius:12px}
+html[data-theme] .visual-modern .concept-icon svg{width:30px;height:30px}
+html[data-theme] .visual-modern .concept-card:nth-child(2) .concept-icon{background:var(--teal-soft);color:var(--teal)}
+html[data-theme] .visual-modern .concept-card:nth-child(3) .concept-icon{background:var(--ochre-soft);color:var(--ochre)}
+html[data-theme] .visual-modern .concept-card>strong{font-size:17px;line-height:1.4}
+html[data-theme] .visual-modern .concept-type{font-size:12px;font-weight:600;color:var(--accent);padding:4px 0;border-bottom:1px solid var(--rule);width:100%}
+html[data-theme] .visual-modern .concept-card p{font-size:13px;line-height:1.75}
+html[data-theme] .visual-modern .task-rows{display:grid;gap:12px}
+html[data-theme] .visual-modern .task-row{display:grid;grid-template-columns:48px minmax(0,1fr) 20px minmax(0,1fr);gap:12px;align-items:center;padding:18px 16px;border:1px solid var(--rule);border-radius:12px;background:var(--surface)}
+html[data-theme] .visual-modern .small-label{display:block;font-size:11px;line-height:1.6;color:var(--muted);margin-bottom:5px}
+html[data-theme] .visual-modern .task-row strong{display:block;font-size:15px;font-weight:600;line-height:1.55}
+html[data-theme] .visual-modern .task-row p{font-size:13px;line-height:1.65;margin:7px 0 0}
+html[data-theme] .visual-modern .task-arrow{font-size:22px;color:var(--accent)}
+@container(max-width:530px){html[data-theme] .visual-modern .concept-grid{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-modern .task-row{grid-template-columns:48px minmax(0,1fr);gap:12px}html[data-theme] .visual-modern .task-arrow{display:none}html[data-theme] .visual-modern .task-choice{grid-column:2;border-top:1px solid var(--rule);padding-top:12px}}
+/* Условный интерфейс намеренно статический: никаких ложных кнопок в tab-порядке. */
+html[data-theme] .visual-modern .application-window{border:1px solid var(--accent-line);border-radius:12px;background:var(--surface);overflow:hidden}
+html[data-theme] .visual-modern .application-title{display:flex;align-items:center;gap:10px;padding:14px 16px;background:var(--soft);border-bottom:1px solid var(--rule);color:var(--ink);font-weight:600}
+html[data-theme] .visual-modern .application-panes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,190px)}
+html[data-theme] .visual-modern .application-main{padding:22px 18px;min-width:0}
+html[data-theme] .visual-modern .ui-label{font-size:13px;font-weight:600;line-height:1.6;color:var(--ink)}
+html[data-theme] .visual-modern .ui-number{display:inline-grid;place-items:center;vertical-align:middle;width:24px;height:24px;border-radius:50%;background:var(--accent);color:white;font:700 12px/1 var(--font);flex-shrink:0}
+html[data-theme] .visual-modern .illustrated-input{margin:10px 0 18px;padding:10px 12px;border:1.5px solid var(--accent);border-radius:6px;background:var(--surface);color:var(--ink);font-size:16px;line-height:1.5}
+html[data-theme] .visual-modern .static-caret{display:inline-block;width:1px;height:1em;margin-left:2px;background:var(--accent);vertical-align:middle}
+html[data-theme] .visual-modern .illustrated-button{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:6px;background:var(--accent);color:white;font-size:14px;font-weight:600}
+html[data-theme] .visual-modern .illustrated-button .ui-number{background:white;color:var(--accent)}
+html[data-theme] .visual-modern .ui-status{margin-top:18px;font-size:12px;line-height:1.7;color:var(--muted)}
+html[data-theme] .visual-modern .illustrated-menu{padding:22px 14px;background:var(--surface-alt);border-left:1px solid var(--rule);min-width:0}
+html[data-theme] .visual-modern .illustrated-menu ul{list-style:none;padding:0;margin:12px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+html[data-theme] .visual-modern .illustrated-menu li{font-size:13px;line-height:1.6;padding:10px;margin:0}
+html[data-theme] .visual-modern .illustrated-menu li+li{border-top:1px solid var(--rule)}
+html[data-theme] .visual-modern .illustrated-menu p{font-size:12px;line-height:1.7;color:var(--muted)}
+html[data-theme] .visual-modern .action-sequence{display:grid;gap:0;list-style:none;padding:0;margin:0}
+html[data-theme] .visual-modern .action-sequence li{display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px;position:relative;margin:0;padding:0 0 24px}
+html[data-theme] .visual-modern .action-sequence li:last-child{padding-bottom:0}
+html[data-theme] .visual-modern .action-sequence li:not(:last-child)::before{content:"";position:absolute;left:17px;top:36px;bottom:0;width:1px;background:var(--accent-border)}
+html[data-theme] .visual-modern .sequence-number{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--accent-border);border-radius:50%;background:var(--surface);color:var(--accent);font-size:15px;font-weight:600}
+html[data-theme] .visual-modern .action-sequence strong{display:block;color:var(--ink);font-size:16px;line-height:1.5;margin:5px 0 8px}
+html[data-theme] .visual-modern .action-sequence p{font-size:14px;line-height:1.7}
+@container(max-width:480px){html[data-theme] .visual-modern .application-panes{grid-template-columns:minmax(0,1fr)}html[data-theme] .visual-modern .illustrated-menu{border-left:0;border-top:1px solid var(--rule)}html[data-theme] .visual-modern .application-main{padding:18px 14px}}
