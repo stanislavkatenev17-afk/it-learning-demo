@@ -1,1 +1,26 @@
-
+{
+  "date": "2026-11-12",
+  "tool": "Built-in image_gen.imagegen",
+  "origin": "Generated educational renders; unbranded, no exact commercial model. Images are not to the same physical scale. No third-party logos, photos or screenshot licences are claimed.",
+  "optimization": "Original PNG preserved; resized to width 1000 and encoded WebP quality 88 using sharp, without content retouching.",
+  "assets": [
+    {
+      "file": "processor.webp",
+      "original": "originals/processor.png",
+      "prompt": "Use case: product-mockup. One educational photorealistic product rendering of a neutral desktop CPU package, unbranded and not an exact commercial model. A physically plausible small square green processor substrate carrying a clean silver metal integrated heat spreader on its top surface, subtle realistic edge thickness; slightly elevated three-quarter top view, no pins visible because underside hidden. Whole single processor centered, isolated on pure white background, generous white margins, soft studio lighting from upper left, faint soft contact shadow. Matte brushed silver, crisp believable manufacturing geometry. No text, no logos, no labels, no glowing circuits, no motherboard, no socket, no other objects, no fictional floating holograms. Wide 3:2 image, processor occupies middle 60 percent of width. Accurate physical object, not a diagram.",
+      "bytes": 32196
+    },
+    {
+      "file": "ram.webp",
+      "original": "originals/ram.png",
+      "prompt": "Use case: product-mockup. One educational photorealistic rendering of a neutral standard desktop RAM DIMM module, unbranded and not an exact model. A long thin green printed circuit board with approximately 4.3:1 length-to-height ratio, eight identical matte black rectangular memory chips arranged evenly in a single row on its visible face, gold plated edge contacts along the long bottom edge with one realistic off-center key notch, no connectors on top. Whole module visible, front view slightly elevated so realistic thin thickness is apparent, long edge horizontal. Isolated on pure white background, generous white margins, soft studio lighting from upper left and a faint soft contact shadow. Wide 3:2 image. No labels, no text, no brands, no capacity markings, no RGB lighting, no heat spreader, no motherboard, no extra objects. Plausible hardware geometry and clean materials, not a diagram.",
+      "bytes": 44106
+    },
+    {
+      "file": "ssd.webp",
+      "original": "originals/ssd.png",
+      "prompt": "Use case: product-mockup. One educational photorealistic rendering of an unbranded neutral 2.5 inch SATA solid state drive as a complete closed device, not a cutaway and not an exact commercial model. Physically plausible thin rectangular dark charcoal metal enclosure, approximately 100 mm by 70 mm by 7 mm, gently rounded corners, four small recessed corner screws, clean uninterrupted top face. Elevated three-quarter top view; the connector end faces away and is not visibly detailed. Single whole drive centered and isolated on pure white background with generous margins. Soft studio lighting from upper left, faint contact shadow, high quality realistic materials. Wide 3:2 image, enclosure occupies middle 65 percent of width. No text, no SSD lettering, no logos, no labels, no cables, no visible circuit board, no exposed spinning platters, no fictional glowing parts, no extra objects. This is a solid state drive enclosure, not a hard disk cutaway.",
+      "bytes": 28056
+    }
+  ]
+}
