@@ -1,1 +1,32 @@
-
+{
+  "createdOn": "2026-11-12",
+  "generator": "Built-in image_gen.imagegen",
+  "externalLogos": [],
+  "realProductScreenshots": [],
+  "interfaces": "Own conditional HTML windows. No real product, version, operating system or screenshot is claimed.",
+  "usage": "Generated educational project resources without branding. Not photographs of identified models or places. No third-party photo licence is attached or claimed.",
+  "optimization": "Original PNG preserved. Resized without enlargement and encoded with sharp to WebP quality 88; alpha preserved. No content retouching.",
+  "assets": [
+    {
+      "file": "monitor-front.webp",
+      "original": "originals/monitor-front.png",
+      "role": "Neutral reusable realistic monitor render",
+      "prompt": "Use case: product-mockup. Project asset for a beginner IT educational course, not a full illustration. Create one photorealistic, neutral unbranded desktop monitor, isolated with true transparent background. Exact straight-on orthographic front view at eye level, absolutely level, symmetrical physically plausible thin matte charcoal bezel and a simple single silver metal central stand on a broad stable thin silver foot. Screen aspect ratio 16:10, screen is completely blank solid very pale blue #eef3f7, no reflection obscuring it. Monitor body occupies most of image width and upper 75 percent of image height, stand underneath, small balanced transparent margin all around. Soft studio light from upper left, realistic subtle materials and soft shadow immediately under foot, clean high quality product photo. No computer tower, no keyboard, no mouse, no cable, no desk, no logos, no text, no UI, no icons, no symbols. Geometry must be easy to overlay a separate flat rectangular HTML window on the screen. One monitor only.",
+      "bytes": 37076
+    },
+    {
+      "file": "mountains.webp",
+      "original": "originals/mountains.png",
+      "role": "Generated photographic content inside conditional photo viewer",
+      "prompt": "Use case: photorealistic-natural. One simple high quality landscape photograph for a tiny educational photo-viewer example. Wide 3:2 composition of a distinct mountain range with a turquoise lake and evergreen forest foreground, natural soft daylight, believable geography and texture, no stylization, no text, no border, no watermark, no people, no interface. Calm clean scene with mountains clearly recognizable even when displayed small. Full bleed photograph.",
+      "bytes": 146122
+    },
+    {
+      "file": "house.webp",
+      "original": "originals/house.png",
+      "role": "Second generated photographic content inside the same photo viewer",
+      "prompt": "Use case: photorealistic-natural. One realistic landscape photograph for a tiny educational photo-viewer example, full bleed, wide 3:2 composition. A simple small detached cream countryside house with pitched dark slate roof, believable straight walls, windows and wooden front door, modest green lawn and a leafy tree, warm soft daylight. Whole house centered clearly visible with comfortable space around it, slight three quarter angle. No people, no cars, no text, no logos, no signs, no border, no interface, no watermark. Clean natural photographic details, house recognizable at small display size.",
+      "bytes": 135728
+    }
+  ]
+}
