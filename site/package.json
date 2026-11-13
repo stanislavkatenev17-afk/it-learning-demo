@@ -1,0 +1,1 @@
+{"name":"it-learning-platform","private":true,"type":"module","scripts":{"build":"node build.mjs","start":"node serve.mjs","test":"node verify.mjs && node verify-terms.mjs && node verify-theme.mjs"}}
