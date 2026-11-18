@@ -1,0 +1,31 @@
+name: Проверки учебной платформы
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check-course:
+    name: Сборка и проверки курса
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Получить исходники
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Подготовить Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Собрать сайт
+        run: node site/build.mjs
+      - name: Проверить уроки, ссылки и задания
+        run: node site/verify.mjs
+      - name: Проверить правила выделения терминов
+        run: node site/verify-terms.mjs
+      - name: Проверить светлую тему
+        run: node site/verify-theme.mjs
