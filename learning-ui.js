@@ -211,18 +211,24 @@ function homeMarkup(){
   setupCopy();setupMicroInteractions();setupQuiz();syncSidebar();updateNav();
  }
 
- function resultMarkup(items){return items.map((item,i)=>`<li role="none"><a id="ui-command-${i}" role="option" aria-selected="${i===searchIndex}" href="${esc(item.href)}"><span><strong>${esc(item.title)}</strong><small>${esc(item.kind)}</small></span><span aria-hidden="true">↗</span></a></li>`).join('');}
+ function resultMarkup(items){return items.map((item,i)=>`<li role="none"><a id="ui-command-${i}" role="option" tabindex="-1" aria-selected="${i===searchIndex}" href="${esc(item.href)}"><span><strong>${esc(item.title)}</strong><small>${esc(item.kind)}</small></span><span aria-hidden="true">↗</span></a></li>`).join('');}
  function refreshSearch(){
   const query=searchDialog.querySelector('input').value.trim().toLocaleLowerCase('ru');searchIndex=0;
   const all=[...C.modules.map(m=>({title:m.id+'. '+m.title,kind:'Модуль',href:'#/module/'+m.id})),...C.lessons.map(l=>({title:l.id+' · '+l.title,kind:'Урок',href:'#/lesson/'+l.id})),...C.glossary.map(t=>({title:t.term,kind:'Термин',href:'#/glossary?q='+encodeURIComponent(t.term)}))];
   const candidates=query?all.filter(item=>query.split(/\s+/).every(word=>item.title.toLocaleLowerCase('ru').includes(word))).sort((a,b)=>Number(b.title.toLocaleLowerCase('ru').startsWith(query))-Number(a.title.toLocaleLowerCase('ru').startsWith(query))):[{title:'Программа курса',kind:'Все 11 модулей',href:'#/course'},{title:'Словарь',kind:'Понятные объяснения',href:'#/glossary'},{title:'Мой прогресс',kind:'Отметки текущей вкладки',href:'#/progress'},...(lastLesson?[{title:'Продолжить урок '+lastLesson,kind:'Последний открытый урок',href:'#/lesson/'+lastLesson}]:[])];
   searchItems=candidates.slice(0,12);const list=searchDialog.querySelector('#ui-command-results');list.innerHTML=resultMarkup(searchItems);
+  list.scrollTop=0;
   searchDialog.querySelector('#ui-command-count').textContent=query?`Найдено: ${candidates.length}${candidates.length>12?'. Показаны первые 12.':'.'}`:'Быстрые переходы';
   const input=searchDialog.querySelector('input');if(searchItems.length)input.setAttribute('aria-activedescendant','ui-command-0');else{input.removeAttribute('aria-activedescendant');list.innerHTML='<li class="ui-command-empty" role="presentation">Ничего не найдено. Попробуйте другое слово.</li>';}
  }
  function openSearch(){
-  if(document.querySelector('dialog[open]')&&!searchDialog.open)return;
-  searchOrigin=document.activeElement;if(searchDialog.open)return;searchDialog.querySelector('input').value='';refreshSearch();searchDialog.showModal();searchDialog.querySelector('input').focus();
+  if(document.querySelector('dialog[open]'))return;
+  searchOrigin=document.activeElement;
+  const input=searchDialog.querySelector('input');
+  input.value='';
+  searchDialog.showModal();
+  refreshSearch();
+  input.focus();
  }
  function init(){
   searchDialog=document.createElement('dialog');searchDialog.className='ui-command';searchDialog.setAttribute('aria-labelledby','ui-command-title');
@@ -233,11 +239,18 @@ function homeMarkup(){
    if(event.key==='Enter'&&searchItems.length){event.preventDefault();const href=searchItems[searchIndex].href;searchDialog.close();location.hash=href;}
   });
   searchDialog.addEventListener('click',event=>{if(event.target.closest('a'))searchDialog.close();});
-  searchDialog.addEventListener('close',()=>{if(searchOrigin?.isConnected)searchOrigin.focus({preventScroll:true});});
+  searchDialog.addEventListener('close',()=>{
+   if(document.activeElement===document.body&&searchOrigin?.isConnected)searchOrigin.focus({preventScroll:true});
+  });
   document.querySelector('#quick-search').innerHTML=searchIcon+'<span>Поиск</span><kbd>Ctrl K</kbd>';
   document.querySelector('#quick-search').addEventListener('click',openSearch);
   document.querySelector('#sidebar-toggle').addEventListener('click',()=>{clearTimeout(sidebarTimer);document.body.classList.add('ui-sidebar-animating');sidebarCollapsed=!sidebarCollapsed;syncSidebar();sidebarTimer=setTimeout(()=>document.body.classList.remove('ui-sidebar-animating'),320);});
-  document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'){event.preventDefault();openSearch();}});
+  document.addEventListener('keydown',event=>{
+   if((event.ctrlKey||event.metaKey)&&(event.key.toLowerCase()==='k'||event.code==='KeyK')){
+    event.preventDefault();
+    openSearch();
+   }
+  });
   window.addEventListener('resize',()=>{document.body.classList.remove('ui-sidebar-animating');syncSidebar();updateNav();});menu.addEventListener('click',()=>requestAnimationFrame(updateNav));
   reduced.addEventListener('change',()=>{if(reduced.matches){document.getAnimations().forEach(animation=>{if(Number.isFinite(animation.effect?.getComputedTiming().endTime))animation.finish();else animation.cancel();});document.querySelectorAll('.ui-magnetic-content').forEach(el=>el.style.transform='');}});
  }
